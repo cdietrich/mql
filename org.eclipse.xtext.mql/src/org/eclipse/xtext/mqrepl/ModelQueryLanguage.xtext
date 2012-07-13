@@ -1,0 +1,20 @@
+grammar org.eclipse.xtext.mqrepl.ModelQueryLanguage with org.eclipse.xtext.xbase.Xbase
+
+generate modelQueryLanguage "http://www.eclipse.org/xtext/mqrepl/ModelQueryLanguage"
+
+import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
+
+Model:
+	imports += Import*
+	body = XBlockExpressionWithoutBraces;
+
+Import:
+	'import' importedNamespace=QualifiedNameWithWildCard;
+	
+QualifiedNameWithWildCard :
+	QualifiedName  ('.' '*')?;		
+	
+XBlockExpressionWithoutBraces returns xbase::XBlockExpression: 
+	{xbase::XBlockExpression}
+		(expressions+=XExpressionInsideBlock ';'?)*
+	;	

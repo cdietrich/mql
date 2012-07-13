@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.xtext.mql
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: org.eclipse.xtext.mql; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;bundle-version="2.1.0";visibility:=reexport,
+ org.eclipse.xtext.xbase;bundle-version="2.1.0";resolution:=optional;visibility:=reexport,
+ org.apache.log4j;bundle-version="1.2.15";visibility:=reexport,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.eclipse.xtend2.lib
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.xtext.mqrepl,
+ org.eclipse.xtext.mqrepl.services,
+ org.eclipse.xtext.mqrepl.modelQueryLanguage,
+ org.eclipse.xtext.mqrepl.modelQueryLanguage.impl,
+ org.eclipse.xtext.mqrepl.modelQueryLanguage.util,
+ org.eclipse.xtext.mqrepl.serializer,
+ org.eclipse.xtext.mqrepl.parser.antlr,
+ org.eclipse.xtext.mqrepl.parser.antlr.internal,
+ org.eclipse.xtext.mqrepl.validation,
+ org.eclipse.xtext.mqrepl.formatting,
+ org.eclipse.xtext.mqrepl.jvmmodel

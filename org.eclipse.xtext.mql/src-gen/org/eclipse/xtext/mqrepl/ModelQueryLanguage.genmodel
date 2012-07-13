@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.xtext.mql/src-gen"
+    editDirectory="/org.eclipse.xtext.mql.edit/src" editorDirectory="/org.eclipse.xtext.mql.editor/src"
+    modelPluginID="org.eclipse.xtext.mql" forceOverwrite="true" modelName="ModelQueryLanguage"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipse.xtext.mql.edit"
+    editorPluginID="org.eclipse.xtext.mql.editor" usedGenPackages="../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase">
+  <genPackages prefix="ModelQueryLanguage" basePackage="org.eclipse.xtext.mqrepl"
+      disposableProviderFactory="true" ecorePackage="ModelQueryLanguage.ecore#/">
+    <genClasses ecoreClass="ModelQueryLanguage.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//Model/body"/>
+    </genClasses>
+    <genClasses ecoreClass="ModelQueryLanguage.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelQueryLanguage.ecore#//Import/importedNamespace"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
