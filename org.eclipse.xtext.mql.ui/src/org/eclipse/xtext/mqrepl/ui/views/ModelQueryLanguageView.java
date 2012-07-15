@@ -2,6 +2,7 @@ package org.eclipse.xtext.mqrepl.ui.views;
 
 
 
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.GridLayout;
@@ -46,10 +47,17 @@ public class ModelQueryLanguageView extends ViewPart {
 		configuration.getHighlightingHelper().install(getEmbeddedEditorResult().getConfiguration(), getEmbeddedEditorResult().getViewer());
 		getEmbeddedEditor().getViewer().getControl().setFont(new Font(Display.getDefault(), FONT_NAME, FONT_SIZE, SWT.NORMAL));
 		getEmbeddedEditorResult().getViewer().getControl().setFont(new Font(Display.getDefault(), FONT_NAME, FONT_SIZE, SWT.NORMAL));
-		
+		getEmbeddedEditor().getDocument().set(getInitialFile());
 		
 		parent.pack();
 		
+	}
+
+	private String getInitialFile() {
+		StringBuffer result = new StringBuffer();
+		result.append("import org.eclipse.xtext.resource.*\n");
+		result.append("import org.eclipse.emf.ecore.util.*\n");
+		return result.toString();
 	}
 
 	@Override

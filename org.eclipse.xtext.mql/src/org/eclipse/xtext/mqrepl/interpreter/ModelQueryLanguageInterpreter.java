@@ -23,7 +23,7 @@ public class ModelQueryLanguageInterpreter extends XbaseInterpreter {
 		if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME+"."+IModelQueryConstants.INDEX)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
-		} else if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME+"."+IModelQueryConstants.INDEX)) {
+		} else if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME+"."+IModelQueryConstants.RESOURCESET)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
 		} 
