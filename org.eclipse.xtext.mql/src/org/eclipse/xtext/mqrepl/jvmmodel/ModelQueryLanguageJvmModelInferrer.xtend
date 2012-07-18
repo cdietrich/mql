@@ -10,6 +10,7 @@ import org.eclipse.xtext.mqrepl.IModelQueryConstants
 import org.eclipse.xtext.common.types.util.TypeReferences
 import org.eclipse.xtext.resource.IResourceDescriptions
 import org.eclipse.emf.ecore.resource.ResourceSet
+import com.google.inject.Injector
 
 class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
 
@@ -23,8 +24,10 @@ class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
    			model.toClass(IModelQueryConstants::INFERRED_CLASS_NAME) [
    				members += model.toField(IModelQueryConstants::INDEX, typeof(IResourceDescriptions).getTypeForName(model))
    				members += model.toField(IModelQueryConstants::RESOURCESET, typeof(ResourceSet).getTypeForName(model))
+   				members += model.toField(IModelQueryConstants::INJECTOR, typeof(Injector).getTypeForName(model))
    				members += model.toMethod("main", Void::TYPE.getTypeForName(model)) [
    					body = model.body
+   					exceptions += typeof(Exception).getTypeForName(model)
    				]
    			]
    		)

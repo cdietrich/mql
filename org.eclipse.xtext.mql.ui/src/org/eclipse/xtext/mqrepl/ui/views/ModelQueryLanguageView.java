@@ -1,11 +1,9 @@
 package org.eclipse.xtext.mqrepl.ui.views;
 
-
-
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.graphics.Font;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.part.ViewPart;
@@ -26,7 +24,6 @@ public class ModelQueryLanguageView extends ViewPart {
 	EmbeddedEditorFactory embeddedEditorFactory;
 	private EmbeddedEditor embeddedEditor;
 	private EmbeddedEditor embeddedEditorResult;
-	//private ListViewer listViewer;
 
 	@Inject
 	ViewerConfiguration configuration;
@@ -34,13 +31,10 @@ public class ModelQueryLanguageView extends ViewPart {
 	
 	@Override
 	public void createPartControl(Composite parent) {
-		
-		Composite view = new Composite(parent, SWT.NONE);
-		GridLayout layout = new GridLayout();
-		layout.numColumns = 2;
-		view.setLayout(layout);
-		embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider).withParent(view);
-		embeddedEditorResult = embeddedEditorFactory.newEditor(editedResourceProvider).readOnly().withParent(view);
+		SashForm sashForm = new SashForm(parent, SWT.HORIZONTAL);
+		sashForm.setLayout(new FillLayout());
+		embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider).withParent(sashForm);
+		embeddedEditorResult = embeddedEditorFactory.newEditor(editedResourceProvider).readOnly().withParent(sashForm);
 		getEmbeddedEditor().createPartialEditor();
 		getEmbeddedEditorResult().createPartialEditor();
 		configuration.getHighlightingHelper().install(getEmbeddedEditor().getConfiguration(), getEmbeddedEditor().getViewer());
@@ -57,6 +51,10 @@ public class ModelQueryLanguageView extends ViewPart {
 		StringBuffer result = new StringBuffer();
 		result.append("import org.eclipse.xtext.resource.*\n");
 		result.append("import org.eclipse.emf.ecore.util.*\n");
+		result.append("// Built in Variables: \n");
+		result.append("// index\n");
+		result.append("// resourceSet\n");
+		result.append("// index\n");
 		return result.toString();
 	}
 

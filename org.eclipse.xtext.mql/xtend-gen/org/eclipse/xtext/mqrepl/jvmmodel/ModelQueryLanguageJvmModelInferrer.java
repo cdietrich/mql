@@ -41,15 +41,24 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
             JvmField _field_1 = ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.toField(model, IModelQueryConstants.RESOURCESET, _typeForName_1);
             CollectionExtensions.<JvmField>operator_add(_members_1, _field_1);
             EList<JvmMember> _members_2 = it.getMembers();
-            JvmTypeReference _typeForName_2 = ModelQueryLanguageJvmModelInferrer.this._typeReferences.getTypeForName(Void.TYPE, model);
+            JvmTypeReference _typeForName_2 = ModelQueryLanguageJvmModelInferrer.this._typeReferences.getTypeForName(com.google.inject.Injector.class, model);
+            JvmField _field_2 = ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.toField(model, IModelQueryConstants.INJECTOR, _typeForName_2);
+            CollectionExtensions.<JvmField>operator_add(_members_2, _field_2);
+            EList<JvmMember> _members_3 = it.getMembers();
+            JvmTypeReference _typeForName_3 = ModelQueryLanguageJvmModelInferrer.this._typeReferences.getTypeForName(Void.TYPE, model);
             final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
-                  XBlockExpression _body = model.getBody();
-                  ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _body);
+                  {
+                    XBlockExpression _body = model.getBody();
+                    ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _body);
+                    EList<JvmTypeReference> _exceptions = it.getExceptions();
+                    JvmTypeReference _typeForName = ModelQueryLanguageJvmModelInferrer.this._typeReferences.getTypeForName(java.lang.Exception.class, model);
+                    CollectionExtensions.<JvmTypeReference>operator_add(_exceptions, _typeForName);
+                  }
                 }
               };
-            JvmOperation _method = ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.toMethod(model, "main", _typeForName_2, _function);
-            CollectionExtensions.<JvmOperation>operator_add(_members_2, _method);
+            JvmOperation _method = ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.toMethod(model, "main", _typeForName_3, _function);
+            CollectionExtensions.<JvmOperation>operator_add(_members_3, _method);
           }
         }
       };
