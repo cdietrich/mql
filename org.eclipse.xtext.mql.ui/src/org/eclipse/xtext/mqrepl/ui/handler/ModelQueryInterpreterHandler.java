@@ -74,7 +74,33 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 
 		final IWorkbenchPart view = HandlerUtil.getActivePart(event);
 		IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
-		if (activeEditor != null && activeEditor instanceof XtextEditor) {
+		 if (view instanceof ModelQueryLanguageView) {
+			final ModelQueryLanguageView mqlv = (ModelQueryLanguageView) view;
+			final Holder<String> ref = new Holder<String>();
+			try {
+				workbench.getProgressService().run(true, true, new IRunnableWithProgress() {
+
+					@Override
+					public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+						XtextDocument doc = ((ModelQueryLanguageView) view).getEmbeddedEditor().getDocument();
+						String result = doc.readOnly(new IUnitOfWork<String, XtextResource>() {
+							@Override
+							public String exec(XtextResource r) throws Exception {
+								Model m = (Model) r.getContents().get(0);
+								return interpret(m, monitor);
+							}
+						});
+						ref.set(result);
+					}
+				});
+				mqlv.getEmbeddedEditorResult().getDocument().set(ref.get());
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		} else if (activeEditor != null && activeEditor instanceof XtextEditor) {
 			final XtextEditor editor = (XtextEditor) activeEditor;
 			final Holder<String> ref = new Holder<String>();
 			try {
@@ -103,33 +129,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 			injector.injectMembers(dialog);
 			dialog.open();
 
-		} else if (view instanceof ModelQueryLanguageView) {
-			final ModelQueryLanguageView mqlv = (ModelQueryLanguageView) view;
-			final Holder<String> ref = new Holder<String>();
-			try {
-				workbench.getProgressService().run(true, true, new IRunnableWithProgress() {
-
-					@Override
-					public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-						XtextDocument doc = ((ModelQueryLanguageView) view).getEmbeddedEditor().getDocument();
-						String result = doc.readOnly(new IUnitOfWork<String, XtextResource>() {
-							@Override
-							public String exec(XtextResource r) throws Exception {
-								Model m = (Model) r.getContents().get(0);
-								return interpret(m, monitor);
-							}
-						});
-						ref.set(result);
-					}
-				});
-				mqlv.getEmbeddedEditorResult().getDocument().set(ref.get());
-			} catch (InvocationTargetException e) {
-				e.printStackTrace();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
-		}
+		} 
 		return null;
 	}
 
