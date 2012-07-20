@@ -3,7 +3,23 @@ grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
 generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
 
 Model:
-	greetings+=Greeting*;
+	entities+=Entity*;
 	
-Greeting:
-	'Hello' name=ID '!';
+Entity:
+	'entity' name=ID '{' 
+		features+=Feature*
+	'}';
+	
+Feature:
+	Attribute | Reference
+;
+
+Attribute:
+	'attr' name=ID ':' type=Type
+;
+
+Reference:
+	'ref' name=ID ':' type=[Entity];
+	
+enum Type:
+	string | int;
