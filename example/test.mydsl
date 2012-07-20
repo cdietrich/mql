@@ -1,0 +1,9 @@
+entity Person {
+	attr name : string
+	attr age : int
+}
+
+entity Car {
+	attr manufacturer : string
+	ref driver : Person
+}
