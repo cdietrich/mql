@@ -4,6 +4,9 @@
 package org.eclipse.xtext.mqrepl.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.mqrepl.ui.internal.ModelQueryLanguageActivator;
+import org.eclipse.xtext.xbase.lib.Functions.Function0;
+import org.osgi.framework.BundleContext;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -12,30 +15,17 @@ public class ModelQueryLanguageUiModule extends org.eclipse.xtext.mqrepl.ui.Abst
 	public ModelQueryLanguageUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
-	
+
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public java.lang.ClassLoader bindClassLoaderToInstance() {
-			return getClass().getClassLoader();
-		}
+	public java.lang.ClassLoader bindClassLoaderToInstance() {
+		Function0<BundleContext> f = new Function0<BundleContext>() {
 
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public org.eclipse.xtext.common.types.TypesFactory bindTypesFactoryToInstance() {
-			return org.eclipse.xtext.common.types.TypesFactory.eINSTANCE;
-		}
+			@Override
+			public BundleContext apply() {
+				return ModelQueryLanguageActivator.getInstance().getBundle().getBundleContext();
+			}
+		};
+		return new DelegatingClassLoader(f);
+	}
 
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public Class<? extends org.eclipse.xtext.common.types.access.IJvmTypeProvider.Factory> bindIJvmTypeProvider$Factory() {
-			return org.eclipse.xtext.common.types.access.ClasspathTypeProviderFactory.class;
-		}
-
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public Class<? extends org.eclipse.xtext.common.types.xtext.AbstractTypeScopeProvider> bindAbstractTypeScopeProvider() {
-			return org.eclipse.xtext.common.types.xtext.ClasspathBasedTypeScopeProvider.class;
-		}
-
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
-			return org.eclipse.xtext.common.types.xtext.TypesAwareDefaultGlobalScopeProvider.class;
-		}
-	
 }
