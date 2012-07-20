@@ -6,7 +6,11 @@ import org.xtext.example.mydsl.myDsl.Entity
 import org.xtext.example.mydsl.myDsl.Attribute
 import org.eclipse.emf.ecore.resource.ResourceSet
 
-val List<IEObjectDescription> eiods = index.getExportedObjectsByType(MyDslPackage$Literals::ENTITY).toList	
-val entities = eiods.map(g|EcoreUtil::resolve(g.EObjectOrProxy, resourceSet)).filter(typeof(Entity))
-val entitiesWithoutName = entities.filter(e|e.features.filter(typeof(Attribute)).filter(a|a.name == 'name').size == 0)
-entitiesWithoutName.map(e|e.name)
+val List<IEObjectDescription> eiods = 
+	index.getExportedObjectsByType(MyDslPackage$Literals::ENTITY).toList	
+val entities = eiods.map(g|EcoreUtil::resolve(g.EObjectOrProxy, resourceSet))
+	.filter(typeof(Entity))
+val entitiesWithoutName = entities.filter(e|e.features.filter(typeof(Attribute))
+		.filter(a|a.name == 'name').size == 0
+)
+entitiesWithoutName.map(e|e.name).toList
