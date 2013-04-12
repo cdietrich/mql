@@ -6,7 +6,6 @@ import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.xtext.common.types.JvmDeclaredType;
 import org.eclipse.xtext.common.types.JvmField;
 import org.eclipse.xtext.common.types.JvmGenericType;
 import org.eclipse.xtext.common.types.JvmMember;
@@ -16,7 +15,6 @@ import org.eclipse.xtext.common.types.util.TypeReferences;
 import org.eclipse.xtext.mqrepl.IModelQueryConstants;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.resource.IResourceDescriptions;
-import org.eclipse.xtext.util.IAcceptor;
 import org.eclipse.xtext.xbase.XBlockExpression;
 import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer;
 import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor;
@@ -34,7 +32,7 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
   @Extension
   private TypeReferences _typeReferences;
   
-  protected void _infer(final Model model, final IAcceptor<JvmDeclaredType> acceptor, final boolean isPrelinkingPhase) {
+  protected void _infer(final Model model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
         public void apply(final JvmGenericType it) {
           EList<JvmMember> _members = it.getMembers();
@@ -65,17 +63,15 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
         }
       };
     JvmGenericType _class = this._jvmTypesBuilder.toClass(model, IModelQueryConstants.INFERRED_CLASS_NAME, _function);
-    acceptor.accept(_class);
+    acceptor.<JvmGenericType>accept(_class);
   }
   
-  public void infer(final EObject model, final Object acceptor, final boolean isPrelinkingPhase) {
-    if (model instanceof Model
-         && acceptor instanceof IAcceptor) {
-      _infer((Model)model, (IAcceptor<JvmDeclaredType>)acceptor, isPrelinkingPhase);
+  public void infer(final EObject model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
+    if (model instanceof Model) {
+      _infer((Model)model, acceptor, isPrelinkingPhase);
       return;
-    } else if (model != null
-         && acceptor instanceof IJvmDeclaredTypeAcceptor) {
-      _infer(model, (IJvmDeclaredTypeAcceptor)acceptor, isPrelinkingPhase);
+    } else if (model != null) {
+      _infer(model, acceptor, isPrelinkingPhase);
       return;
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +

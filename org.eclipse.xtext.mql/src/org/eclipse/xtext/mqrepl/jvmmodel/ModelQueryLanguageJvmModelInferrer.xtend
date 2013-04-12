@@ -11,6 +11,7 @@ import org.eclipse.xtext.common.types.util.TypeReferences
 import org.eclipse.xtext.resource.IResourceDescriptions
 import org.eclipse.emf.ecore.resource.ResourceSet
 import com.google.inject.Injector
+import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor
 
 class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
 
@@ -19,7 +20,7 @@ class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
 	@Inject extension TypeReferences
 
 
-   	def dispatch void infer(Model model, IAcceptor<JvmDeclaredType> acceptor, boolean isPrelinkingPhase) {
+   	def dispatch void infer(Model model, IJvmDeclaredTypeAcceptor acceptor, boolean isPrelinkingPhase) {
    		acceptor.accept(
    			model.toClass(IModelQueryConstants::INFERRED_CLASS_NAME) [
    				members += model.toField(IModelQueryConstants::INDEX, typeof(IResourceDescriptions).getTypeForName(model))
