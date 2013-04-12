@@ -1,8 +1,8 @@
 package org.eclipse.xtext.mqrepl.ui.views;
 
 import org.eclipse.jface.dialogs.IDialogSettings;
-import org.eclipse.xtext.ui.codetemplates.ui.partialEditing.HighlightingHelper;
 import org.eclipse.xtext.ui.editor.embedded.EmbeddedEditorFactory;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.HighlightingHelper;
 
 import com.google.inject.Inject;
 

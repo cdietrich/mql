@@ -1,16 +1,12 @@
 /**
- * <copyright>
- * </copyright>
- *
-
  */
 package org.eclipse.xtext.mqrepl.modelQueryLanguage;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.xtext.xbase.XBlockExpression;
+
+import org.eclipse.xtext.xtype.XImportSection;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,20 +28,30 @@ import org.eclipse.xtext.xbase.XBlockExpression;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Import}.
+   * Returns the value of the '<em><b>Imports</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Imports</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Imports</em>' containment reference list.
+   * @return the value of the '<em>Imports</em>' containment reference.
+   * @see #setImports(XImportSection)
    * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getModel_Imports()
    * @model containment="true"
    * @generated
    */
-  EList<Import> getImports();
+  XImportSection getImports();
+
+  /**
+   * Sets the value of the '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getImports <em>Imports</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Imports</em>' containment reference.
+   * @see #getImports()
+   * @generated
+   */
+  void setImports(XImportSection value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.

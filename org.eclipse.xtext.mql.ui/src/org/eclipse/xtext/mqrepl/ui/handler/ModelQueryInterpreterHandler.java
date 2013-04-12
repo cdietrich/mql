@@ -16,7 +16,6 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.mqrepl.IModelQueryConstants;
-import org.eclipse.xtext.mqrepl.modelQueryLanguage.Import;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.ui.views.ModelQueryLanguageView;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
@@ -35,6 +34,7 @@ import org.eclipse.xtext.xbase.interpreter.IEvaluationResult;
 import org.eclipse.xtext.xbase.interpreter.impl.DefaultEvaluationContext;
 import org.eclipse.xtext.xbase.interpreter.impl.XbaseInterpreter;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xtype.XImportDeclaration;
 
 import com.google.inject.Inject;
 import com.google.inject.Injector;
@@ -139,7 +139,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX), resourceDescriptions);
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INJECTOR), injector);
-		for (Import i : m.getImports()) {
+		for (XImportDeclaration i : m.getImports().getImportDeclarations()) {
 			data.add(serializer.serialize(i).trim());
 		}
 		monitor.beginTask("Interpreting", m.getBody().getExpressions().size());

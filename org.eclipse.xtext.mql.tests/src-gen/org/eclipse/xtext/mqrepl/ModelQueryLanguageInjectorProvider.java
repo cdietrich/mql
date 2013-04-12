@@ -11,28 +11,35 @@ import org.eclipse.xtext.junit4.IRegistryConfigurator;
 import com.google.inject.Injector;
 
 public class ModelQueryLanguageInjectorProvider implements IInjectorProvider, IRegistryConfigurator {
-	protected GlobalStateMemento globalStateMemento;
+	
+    protected GlobalStateMemento stateBeforeInjectorCreation;
+	protected GlobalStateMemento stateAfterInjectorCreation;
 	protected Injector injector;
 
 	static {
 		GlobalRegistries.initializeDefaults();
 	}
-	
-	public Injector getInjector() {
+
+	public Injector getInjector()
+	{
 		if (injector == null) {
-			this.injector = new ModelQueryLanguageStandaloneSetup().createInjectorAndDoEMFRegistration();
+			stateBeforeInjectorCreation = GlobalRegistries.makeCopyOfGlobalState();
+			this.injector = internalCreateInjector();
+			stateAfterInjectorCreation = GlobalRegistries.makeCopyOfGlobalState();
 		}
 		return injector;
 	}
 	
+	protected Injector internalCreateInjector() {
+	    return new ModelQueryLanguageStandaloneSetup().createInjectorAndDoEMFRegistration();
+	}
+
 	public void restoreRegistry() {
-		globalStateMemento.restoreGlobalState();
+		stateBeforeInjectorCreation.restoreGlobalState();
 	}
 
 	public void setupRegistry() {
-		globalStateMemento = GlobalRegistries.makeCopyOfGlobalState();
-		if (injector != null)
-			new ModelQueryLanguageStandaloneSetup().register(injector);
+		getInjector();
+		stateAfterInjectorCreation.restoreGlobalState();
 	}
-	
 }

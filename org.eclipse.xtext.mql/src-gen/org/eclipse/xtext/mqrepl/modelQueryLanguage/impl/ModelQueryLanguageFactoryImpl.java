@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
-
  */
 package org.eclipse.xtext.mqrepl.modelQueryLanguage.impl;
 
@@ -69,7 +65,6 @@ public class ModelQueryLanguageFactoryImpl extends EFactoryImpl implements Model
     switch (eClass.getClassifierID())
     {
       case ModelQueryLanguagePackage.MODEL: return createModel();
-      case ModelQueryLanguagePackage.IMPORT: return createImport();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -84,17 +79,6 @@ public class ModelQueryLanguageFactoryImpl extends EFactoryImpl implements Model
   {
     ModelImpl model = new ModelImpl();
     return model;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Import createImport()
-  {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
   }
 
   /**

@@ -41,12 +41,12 @@ public abstract class AbstractMyDslRuntimeModule extends DefaultRuntimeModule {
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
-		return org.xtext.example.mydsl.serializer.AbstractMyDslSemanticSequencer.class;
+		return org.xtext.example.mydsl.serializer.MyDslSemanticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
-		return org.xtext.example.mydsl.serializer.AbstractMyDslSyntacticSequencer.class;
+		return org.xtext.example.mydsl.serializer.MyDslSyntacticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment

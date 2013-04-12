@@ -1,17 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
-
  */
 package org.eclipse.xtext.mqrepl.modelQueryLanguage.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -19,14 +11,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.xtext.mqrepl.modelQueryLanguage.Import;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage;
 
 import org.eclipse.xtext.xbase.XBlockExpression;
+
+import org.eclipse.xtext.xtype.XImportSection;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,14 +35,14 @@ import org.eclipse.xtext.xbase.XBlockExpression;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
+   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getImports()
    * @generated
    * @ordered
    */
-  protected EList<Import> imports;
+  protected XImportSection imports;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -90,13 +80,47 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Import> getImports()
+  public XImportSection getImports()
   {
-    if (imports == null)
-    {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, ModelQueryLanguagePackage.MODEL__IMPORTS);
-    }
     return imports;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetImports(XImportSection newImports, NotificationChain msgs)
+  {
+    XImportSection oldImports = imports;
+    imports = newImports;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORTS, oldImports, newImports);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setImports(XImportSection newImports)
+  {
+    if (newImports != imports)
+    {
+      NotificationChain msgs = null;
+      if (imports != null)
+        msgs = ((InternalEObject)imports).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORTS, null, msgs);
+      if (newImports != null)
+        msgs = ((InternalEObject)newImports).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORTS, null, msgs);
+      msgs = basicSetImports(newImports, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORTS, newImports, newImports));
   }
 
   /**
@@ -158,7 +182,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     switch (featureID)
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+        return basicSetImports(null, msgs);
       case ModelQueryLanguagePackage.MODEL__BODY:
         return basicSetBody(null, msgs);
     }
@@ -188,15 +212,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        getImports().clear();
-        getImports().addAll((Collection<? extends Import>)newValue);
+        setImports((XImportSection)newValue);
         return;
       case ModelQueryLanguagePackage.MODEL__BODY:
         setBody((XBlockExpression)newValue);
@@ -216,7 +238,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     switch (featureID)
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        getImports().clear();
+        setImports((XImportSection)null);
         return;
       case ModelQueryLanguagePackage.MODEL__BODY:
         setBody((XBlockExpression)null);
@@ -236,7 +258,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     switch (featureID)
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        return imports != null && !imports.isEmpty();
+        return imports != null;
       case ModelQueryLanguagePackage.MODEL__BODY:
         return body != null;
     }

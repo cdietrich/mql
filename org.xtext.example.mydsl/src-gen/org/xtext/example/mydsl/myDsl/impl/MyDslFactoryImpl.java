@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
-
  */
 package org.xtext.example.mydsl.myDsl.impl;
 

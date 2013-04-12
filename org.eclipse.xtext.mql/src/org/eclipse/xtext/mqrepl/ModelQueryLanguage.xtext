@@ -5,15 +5,9 @@ generate modelQueryLanguage "http://www.eclipse.org/xtext/mqrepl/ModelQueryLangu
 import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
 
 Model:
-	imports += Import*
+	imports = XImportSection
 	body = XBlockExpressionWithoutBraces;
 
-Import:
-	'import' importedNamespace=QualifiedNameWithWildCard;
-	
-QualifiedNameWithWildCard :
-	QualifiedName  ('.' '*')?;		
-	
 XBlockExpressionWithoutBraces returns xbase::XBlockExpression: 
 	{xbase::XBlockExpression}
 		(expressions+=XExpressionInsideBlock ';'?)*

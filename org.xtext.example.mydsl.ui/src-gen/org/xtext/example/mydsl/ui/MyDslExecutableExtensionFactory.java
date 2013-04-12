@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import org.xtext.example.mydsl.ui.internal.MyDslActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class MyDslExecutableExtensionFactory extends AbstractGuiceAwareExecutabl
 
 	@Override
 	protected Bundle getBundle() {
-		return org.xtext.example.mydsl.ui.internal.MyDslActivator.getInstance().getBundle();
+		return MyDslActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return org.xtext.example.mydsl.ui.internal.MyDslActivator.getInstance().getInjector("org.xtext.example.mydsl.MyDsl");
+		return MyDslActivator.getInstance().getInjector(MyDslActivator.ORG_XTEXT_EXAMPLE_MYDSL_MYDSL);
 	}
 	
 }

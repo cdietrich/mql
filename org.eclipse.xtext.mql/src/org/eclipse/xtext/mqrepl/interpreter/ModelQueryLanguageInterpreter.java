@@ -16,8 +16,12 @@ public class ModelQueryLanguageInterpreter extends XbaseInterpreter {
 	@Inject
 	IQualifiedNameConverter qualifiedNameConverter;
 	
+	
+	
+	
+	
 	@Override
-	protected Object _featureCallField(JvmField jvmField,
+	protected Object _invokeFeature(JvmField jvmField,
 			XAbstractFeatureCall featureCall, Object receiver,
 			IEvaluationContext context, CancelIndicator indicator) {
 		if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME+"."+IModelQueryConstants.INDEX)) {
@@ -30,7 +34,7 @@ public class ModelQueryLanguageInterpreter extends XbaseInterpreter {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
 		}
-		return super._featureCallField(jvmField, featureCall, receiver, context,
+		return super._invokeFeature(jvmField, featureCall, receiver, context,
 				indicator);
 	}
 
