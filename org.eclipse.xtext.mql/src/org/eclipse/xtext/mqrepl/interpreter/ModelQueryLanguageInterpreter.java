@@ -42,6 +42,7 @@ public class ModelQueryLanguageInterpreter extends XbaseInterpreter {
 			}
 			IEvaluationResult result = evaluate(m.getBody(), context, indicator);
 			if (result.getException() != null) {
+				result.getException().printStackTrace();
 				throw new EvaluationException(result.getException());
 			}
 			return result.getResult();

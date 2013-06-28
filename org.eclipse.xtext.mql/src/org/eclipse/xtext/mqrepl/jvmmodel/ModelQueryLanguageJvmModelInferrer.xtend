@@ -1,19 +1,17 @@
 package org.eclipse.xtext.mqrepl.jvmmodel
- 
-import com.google.inject.Inject
-import org.eclipse.xtext.common.types.JvmDeclaredType
-import org.eclipse.xtext.util.IAcceptor
-import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer
-import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder
-import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model
-import org.eclipse.xtext.mqrepl.IModelQueryConstants
-import org.eclipse.xtext.common.types.util.TypeReferences
-import org.eclipse.xtext.resource.IResourceDescriptions
-import org.eclipse.emf.ecore.resource.ResourceSet
-import com.google.inject.Injector
-import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor
 
-class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
+import com.google.inject.Inject
+import com.google.inject.Injector
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.xtext.common.types.util.TypeReferences
+import org.eclipse.xtext.mqrepl.IModelQueryConstants
+import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model
+import org.eclipse.xtext.resource.IResourceDescriptions
+import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer
+import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor
+import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder
+
+class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmModelInferrerBase {
 
 	@Inject extension JvmTypesBuilder
 	
@@ -22,7 +20,8 @@ class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
 
    	def dispatch void infer(Model model, IJvmDeclaredTypeAcceptor acceptor, boolean isPrelinkingPhase) {
    		acceptor.accept(
-   			model.toClass(IModelQueryConstants::INFERRED_CLASS_NAME) [
+   			model.toClass(IModelQueryConstants::INFERRED_CLASS_NAME)
+   		).initializeLater [
    				members += model.toField(IModelQueryConstants::INDEX, typeof(IResourceDescriptions).getTypeForName(model))
    				members += model.toField(IModelQueryConstants::RESOURCESET, typeof(ResourceSet).getTypeForName(model))
    				members += model.toField(IModelQueryConstants::INJECTOR, typeof(Injector).getTypeForName(model))
@@ -35,11 +34,12 @@ class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
 							for (p : op.parameters) {
 								parameters += p.toParameter(p.name, p.parameterType)
 							}
+							copyAndFixTypeParameters(op.typeParameters, it)
 							body = op.body
 						]
    				}
    			]
-   		)
+   		
    		
    	}
 }
