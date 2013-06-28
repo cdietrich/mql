@@ -4,12 +4,19 @@
     editorDirectory="/org.eclipse.xtext.mql.editor/src" modelPluginID="org.eclipse.xtext.mql"
     forceOverwrite="true" modelName="ModelQueryLanguage" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipse.xtext.mql.edit"
-    editorPluginID="org.eclipse.xtext.mql.editor" runtimeVersion="2.8" usedGenPackages="../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+    editorPluginID="org.eclipse.xtext.mql.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
   <genPackages prefix="ModelQueryLanguage" basePackage="org.eclipse.xtext.mqrepl"
       disposableProviderFactory="true" ecorePackage="ModelQueryLanguage.ecore#/">
     <genClasses ecoreClass="ModelQueryLanguage.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//Model/methods"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//Model/body"/>
+    </genClasses>
+    <genClasses ecoreClass="ModelQueryLanguage.ecore#//XMethodDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//XMethodDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelQueryLanguage.ecore#//XMethodDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//XMethodDeclaration/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelQueryLanguage.ecore#//XMethodDeclaration/body"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

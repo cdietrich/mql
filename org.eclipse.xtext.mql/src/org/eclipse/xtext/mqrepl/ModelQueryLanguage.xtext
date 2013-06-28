@@ -6,9 +6,14 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
 
 Model:
 	imports = XImportSection
+	methods += XMethodDeclaration*
 	body = XBlockExpressionWithoutBraces;
 
 XBlockExpressionWithoutBraces returns xbase::XBlockExpression: 
 	{xbase::XBlockExpression}
 		(expressions+=XExpressionInsideBlock ';'?)*
 	;	
+
+XMethodDeclaration:
+	"def" type=JvmTypeReference? name=ID "(" (parameters+=FullJvmFormalParameter ("," parameters+=FullJvmFormalParameter)* )? ")" body =XBlockExpression
+;	

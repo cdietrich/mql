@@ -80,6 +80,11 @@ public class ModelQueryLanguageAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseXMethodDeclaration(XMethodDeclaration object)
+      {
+        return createXMethodDeclarationAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -112,6 +117,21 @@ public class ModelQueryLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration <em>XMethod Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration
+   * @generated
+   */
+  public Adapter createXMethodDeclarationAdapter()
   {
     return null;
   }

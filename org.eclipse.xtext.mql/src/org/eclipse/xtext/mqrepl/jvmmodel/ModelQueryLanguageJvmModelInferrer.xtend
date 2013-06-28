@@ -30,6 +30,14 @@ class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
    					body = model.body
    					exceptions += typeof(Exception).getTypeForName(model)
    				]
+   				for (op : model.methods) {
+   					members += op.toMethod(op.name, op.type ?: inferredType) [
+							for (p : op.parameters) {
+								parameters += p.toParameter(p.name, p.parameterType)
+							}
+							body = op.body
+						]
+   				}
    			]
    		)
    		

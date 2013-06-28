@@ -2,15 +2,19 @@
  */
 package org.eclipse.xtext.mqrepl.modelQueryLanguage.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.xtext.common.types.TypesPackage;
+
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguageFactory;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage;
+import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
 
 import org.eclipse.xtext.xbase.XbasePackage;
 
@@ -30,6 +34,13 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    * @generated
    */
   private EClass modelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xMethodDeclarationEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -123,9 +134,69 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Body()
+  public EReference getModel_Methods()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModel_Body()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXMethodDeclaration()
+  {
+    return xMethodDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXMethodDeclaration_Type()
+  {
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXMethodDeclaration_Name()
+  {
+    return (EAttribute)xMethodDeclarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXMethodDeclaration_Parameters()
+  {
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXMethodDeclaration_Body()
+  {
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -160,7 +231,14 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
     // Create classes and their features
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__IMPORTS);
+    createEReference(modelEClass, MODEL__METHODS);
     createEReference(modelEClass, MODEL__BODY);
+
+    xMethodDeclarationEClass = createEClass(XMETHOD_DECLARATION);
+    createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__TYPE);
+    createEAttribute(xMethodDeclarationEClass, XMETHOD_DECLARATION__NAME);
+    createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__PARAMETERS);
+    createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__BODY);
   }
 
   /**
@@ -190,6 +268,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
     // Obtain other dependent packages
     XtypePackage theXtypePackage = (XtypePackage)EPackage.Registry.INSTANCE.getEPackage(XtypePackage.eNS_URI);
     XbasePackage theXbasePackage = (XbasePackage)EPackage.Registry.INSTANCE.getEPackage(XbasePackage.eNS_URI);
+    TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
     // Create type parameters
 
@@ -200,7 +279,14 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Imports(), theXtypePackage.getXImportSection(), null, "imports", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Methods(), this.getXMethodDeclaration(), null, "methods", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Body(), theXbasePackage.getXBlockExpression(), null, "body", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xMethodDeclarationEClass, XMethodDeclaration.class, "XMethodDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXMethodDeclaration_Type(), theTypesPackage.getJvmTypeReference(), null, "type", null, 0, 1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getXMethodDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXMethodDeclaration_Parameters(), theTypesPackage.getJvmFormalParameter(), null, "parameters", null, 0, -1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXMethodDeclaration_Body(), theXbasePackage.getXExpression(), null, "body", null, 0, 1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

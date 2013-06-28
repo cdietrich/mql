@@ -2,8 +2,12 @@
  */
 package org.eclipse.xtext.mqrepl.modelQueryLanguage.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,8 +15,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage;
+import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
 
 import org.eclipse.xtext.xbase.XBlockExpression;
 
@@ -26,6 +34,7 @@ import org.eclipse.xtext.xtype.XImportSection;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getMethods <em>Methods</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
@@ -43,6 +52,16 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @ordered
    */
   protected XImportSection imports;
+
+  /**
+   * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMethods()
+   * @generated
+   * @ordered
+   */
+  protected EList<XMethodDeclaration> methods;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -128,6 +147,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<XMethodDeclaration> getMethods()
+  {
+    if (methods == null)
+    {
+      methods = new EObjectContainmentEList<XMethodDeclaration>(XMethodDeclaration.class, this, ModelQueryLanguagePackage.MODEL__METHODS);
+    }
+    return methods;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public XBlockExpression getBody()
   {
     return body;
@@ -183,6 +216,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
         return basicSetImports(null, msgs);
+      case ModelQueryLanguagePackage.MODEL__METHODS:
+        return ((InternalEList<?>)getMethods()).basicRemove(otherEnd, msgs);
       case ModelQueryLanguagePackage.MODEL__BODY:
         return basicSetBody(null, msgs);
     }
@@ -201,6 +236,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
         return getImports();
+      case ModelQueryLanguagePackage.MODEL__METHODS:
+        return getMethods();
       case ModelQueryLanguagePackage.MODEL__BODY:
         return getBody();
     }
@@ -212,6 +249,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -219,6 +257,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
         setImports((XImportSection)newValue);
+        return;
+      case ModelQueryLanguagePackage.MODEL__METHODS:
+        getMethods().clear();
+        getMethods().addAll((Collection<? extends XMethodDeclaration>)newValue);
         return;
       case ModelQueryLanguagePackage.MODEL__BODY:
         setBody((XBlockExpression)newValue);
@@ -240,6 +282,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
         setImports((XImportSection)null);
         return;
+      case ModelQueryLanguagePackage.MODEL__METHODS:
+        getMethods().clear();
+        return;
       case ModelQueryLanguagePackage.MODEL__BODY:
         setBody((XBlockExpression)null);
         return;
@@ -259,6 +304,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case ModelQueryLanguagePackage.MODEL__IMPORTS:
         return imports != null;
+      case ModelQueryLanguagePackage.MODEL__METHODS:
+        return methods != null && !methods.isEmpty();
       case ModelQueryLanguagePackage.MODEL__BODY:
         return body != null;
     }

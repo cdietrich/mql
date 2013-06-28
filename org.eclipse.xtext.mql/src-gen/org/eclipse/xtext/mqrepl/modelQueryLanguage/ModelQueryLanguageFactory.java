@@ -32,6 +32,15 @@ public interface ModelQueryLanguageFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>XMethod Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>XMethod Declaration</em>'.
+   * @generated
+   */
+  XMethodDeclaration createXMethodDeclaration();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

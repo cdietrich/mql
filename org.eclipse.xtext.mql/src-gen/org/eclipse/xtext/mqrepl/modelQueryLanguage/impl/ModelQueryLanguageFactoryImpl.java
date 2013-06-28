@@ -30,7 +30,7 @@ public class ModelQueryLanguageFactoryImpl extends EFactoryImpl implements Model
   {
     try
     {
-      ModelQueryLanguageFactory theModelQueryLanguageFactory = (ModelQueryLanguageFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/xtext/mqrepl/ModelQueryLanguage"); 
+      ModelQueryLanguageFactory theModelQueryLanguageFactory = (ModelQueryLanguageFactory)EPackage.Registry.INSTANCE.getEFactory(ModelQueryLanguagePackage.eNS_URI);
       if (theModelQueryLanguageFactory != null)
       {
         return theModelQueryLanguageFactory;
@@ -65,6 +65,7 @@ public class ModelQueryLanguageFactoryImpl extends EFactoryImpl implements Model
     switch (eClass.getClassifierID())
     {
       case ModelQueryLanguagePackage.MODEL: return createModel();
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION: return createXMethodDeclaration();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -79,6 +80,17 @@ public class ModelQueryLanguageFactoryImpl extends EFactoryImpl implements Model
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XMethodDeclaration createXMethodDeclaration()
+  {
+    XMethodDeclarationImpl xMethodDeclaration = new XMethodDeclarationImpl();
+    return xMethodDeclaration;
   }
 
   /**

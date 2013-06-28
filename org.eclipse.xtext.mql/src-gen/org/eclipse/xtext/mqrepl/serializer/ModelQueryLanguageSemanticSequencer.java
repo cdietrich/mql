@@ -13,16 +13,14 @@ import org.eclipse.xtext.common.types.JvmWildcardTypeReference;
 import org.eclipse.xtext.common.types.TypesPackage;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage;
+import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
 import org.eclipse.xtext.mqrepl.services.ModelQueryLanguageGrammarAccess;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.eclipse.xtext.xbase.XAssignment;
 import org.eclipse.xtext.xbase.XBinaryOperation;
 import org.eclipse.xtext.xbase.XBlockExpression;
@@ -69,6 +67,12 @@ public class ModelQueryLanguageSemanticSequencer extends XbaseSemanticSequencer 
 			case ModelQueryLanguagePackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
+					return; 
+				}
+				else break;
+			case ModelQueryLanguagePackage.XMETHOD_DECLARATION:
+				if(context == grammarAccess.getXMethodDeclarationRule()) {
+					sequence_XMethodDeclaration(context, (XMethodDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1020,20 +1024,10 @@ public class ModelQueryLanguageSemanticSequencer extends XbaseSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (imports=XImportSection body=XBlockExpressionWithoutBraces)
+	 *     (imports=XImportSection methods+=XMethodDeclaration* body=XBlockExpressionWithoutBraces)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelQueryLanguagePackage.Literals.MODEL__IMPORTS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelQueryLanguagePackage.Literals.MODEL__IMPORTS));
-			if(transientValues.isValueTransient(semanticObject, ModelQueryLanguagePackage.Literals.MODEL__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelQueryLanguagePackage.Literals.MODEL__BODY));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getModelAccess().getImportsXImportSectionParserRuleCall_0_0(), semanticObject.getImports());
-		feeder.accept(grammarAccess.getModelAccess().getBodyXBlockExpressionWithoutBracesParserRuleCall_1_0(), semanticObject.getBody());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1042,6 +1036,15 @@ public class ModelQueryLanguageSemanticSequencer extends XbaseSemanticSequencer 
 	 *     (expressions+=XExpressionInsideBlock*)
 	 */
 	protected void sequence_XBlockExpressionWithoutBraces(EObject context, XBlockExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type=JvmTypeReference? name=ID (parameters+=FullJvmFormalParameter parameters+=FullJvmFormalParameter*)? body=XBlockExpression)
+	 */
+	protected void sequence_XMethodDeclaration(EObject context, XMethodDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }
