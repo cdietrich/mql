@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.xtext.common.types.JvmFormalParameter;
+import org.eclipse.xtext.common.types.JvmTypeParameter;
 import org.eclipse.xtext.common.types.JvmTypeReference;
 
 import org.eclipse.xtext.xbase.XExpression;
@@ -19,6 +20,7 @@ import org.eclipse.xtext.xbase.XExpression;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getTypeParameters <em>Type Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getParameters <em>Parameters</em>}</li>
@@ -32,6 +34,22 @@ import org.eclipse.xtext.xbase.XExpression;
  */
 public interface XMethodDeclaration extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Type Parameters</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipse.xtext.common.types.JvmTypeParameter}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type Parameters</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type Parameters</em>' containment reference list.
+   * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getXMethodDeclaration_TypeParameters()
+   * @model containment="true"
+   * @generated
+   */
+  EList<JvmTypeParameter> getTypeParameters();
+
   /**
    * Returns the value of the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->

@@ -157,6 +157,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 			data.add(serializer.serialize(x).trim());
 			if (result.getException() != null) {
 				data.add("// Exception: " + result.getException().getMessage());
+				result.getException().printStackTrace();
 				return IterableExtensions.join(data, "\n");
 			} else {
 				if (result.getResult() == null) {

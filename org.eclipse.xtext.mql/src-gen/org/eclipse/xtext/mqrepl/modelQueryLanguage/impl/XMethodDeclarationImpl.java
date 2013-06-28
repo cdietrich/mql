@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.xtext.common.types.JvmFormalParameter;
+import org.eclipse.xtext.common.types.JvmTypeParameter;
 import org.eclipse.xtext.common.types.JvmTypeReference;
 
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage;
@@ -33,6 +34,7 @@ import org.eclipse.xtext.xbase.XExpression;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getTypeParameters <em>Type Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getParameters <em>Parameters</em>}</li>
@@ -44,6 +46,16 @@ import org.eclipse.xtext.xbase.XExpression;
  */
 public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container implements XMethodDeclaration
 {
+  /**
+   * The cached value of the '{@link #getTypeParameters() <em>Type Parameters</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypeParameters()
+   * @generated
+   * @ordered
+   */
+  protected EList<JvmTypeParameter> typeParameters;
+
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -113,6 +125,20 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   protected EClass eStaticClass()
   {
     return ModelQueryLanguagePackage.Literals.XMETHOD_DECLARATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<JvmTypeParameter> getTypeParameters()
+  {
+    if (typeParameters == null)
+    {
+      typeParameters = new EObjectContainmentEList<JvmTypeParameter>(JvmTypeParameter.class, this, ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS);
+    }
+    return typeParameters;
   }
 
   /**
@@ -258,6 +284,8 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS:
+        return ((InternalEList<?>)getTypeParameters()).basicRemove(otherEnd, msgs);
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE:
         return basicSetType(null, msgs);
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__PARAMETERS:
@@ -278,6 +306,8 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS:
+        return getTypeParameters();
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE:
         return getType();
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__NAME:
@@ -301,6 +331,10 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS:
+        getTypeParameters().clear();
+        getTypeParameters().addAll((Collection<? extends JvmTypeParameter>)newValue);
+        return;
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE:
         setType((JvmTypeReference)newValue);
         return;
@@ -328,6 +362,9 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS:
+        getTypeParameters().clear();
+        return;
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE:
         setType((JvmTypeReference)null);
         return;
@@ -354,6 +391,8 @@ public class XMethodDeclarationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE_PARAMETERS:
+        return typeParameters != null && !typeParameters.isEmpty();
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__TYPE:
         return type != null;
       case ModelQueryLanguagePackage.XMETHOD_DECLARATION__NAME:

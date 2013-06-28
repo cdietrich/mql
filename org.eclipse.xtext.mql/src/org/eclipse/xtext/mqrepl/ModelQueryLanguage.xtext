@@ -15,5 +15,5 @@ XBlockExpressionWithoutBraces returns xbase::XBlockExpression:
 	;	
 
 XMethodDeclaration:
-	"def" type=JvmTypeReference? name=ID "(" (parameters+=FullJvmFormalParameter ("," parameters+=FullJvmFormalParameter)* )? ")" body =XBlockExpression
+	"def" ('<' typeParameters+=JvmTypeParameter (',' typeParameters+=JvmTypeParameter)* '>')? type=JvmTypeReference? name=ID "(" (parameters+=FullJvmFormalParameter ("," parameters+=FullJvmFormalParameter)* )? ")" body =XBlockExpression
 ;	

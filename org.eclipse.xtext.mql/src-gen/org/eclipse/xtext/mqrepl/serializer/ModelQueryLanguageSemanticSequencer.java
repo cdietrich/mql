@@ -1042,7 +1042,13 @@ public class ModelQueryLanguageSemanticSequencer extends XbaseSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (type=JvmTypeReference? name=ID (parameters+=FullJvmFormalParameter parameters+=FullJvmFormalParameter*)? body=XBlockExpression)
+	 *     (
+	 *         (typeParameters+=JvmTypeParameter typeParameters+=JvmTypeParameter*)? 
+	 *         type=JvmTypeReference? 
+	 *         name=ID 
+	 *         (parameters+=FullJvmFormalParameter parameters+=FullJvmFormalParameter*)? 
+	 *         body=XBlockExpression
+	 *     )
 	 */
 	protected void sequence_XMethodDeclaration(EObject context, XMethodDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

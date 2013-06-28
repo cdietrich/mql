@@ -113,13 +113,22 @@ public interface ModelQueryLanguagePackage extends EPackage
   int XMETHOD_DECLARATION = 1;
 
   /**
+   * The feature id for the '<em><b>Type Parameters</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XMETHOD_DECLARATION__TYPE_PARAMETERS = 0;
+
+  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XMETHOD_DECLARATION__TYPE = 0;
+  int XMETHOD_DECLARATION__TYPE = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -128,7 +137,7 @@ public interface ModelQueryLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int XMETHOD_DECLARATION__NAME = 1;
+  int XMETHOD_DECLARATION__NAME = 2;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -137,7 +146,7 @@ public interface ModelQueryLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int XMETHOD_DECLARATION__PARAMETERS = 2;
+  int XMETHOD_DECLARATION__PARAMETERS = 3;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -146,7 +155,7 @@ public interface ModelQueryLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int XMETHOD_DECLARATION__BODY = 3;
+  int XMETHOD_DECLARATION__BODY = 4;
 
   /**
    * The number of structural features of the '<em>XMethod Declaration</em>' class.
@@ -155,7 +164,7 @@ public interface ModelQueryLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int XMETHOD_DECLARATION_FEATURE_COUNT = 4;
+  int XMETHOD_DECLARATION_FEATURE_COUNT = 5;
 
 
   /**
@@ -210,6 +219,17 @@ public interface ModelQueryLanguagePackage extends EPackage
    * @generated
    */
   EClass getXMethodDeclaration();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getTypeParameters <em>Type Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Type Parameters</em>'.
+   * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getTypeParameters()
+   * @see #getXMethodDeclaration()
+   * @generated
+   */
+  EReference getXMethodDeclaration_TypeParameters();
 
   /**
    * Returns the meta object for the containment reference '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getType <em>Type</em>}'.
@@ -321,6 +341,14 @@ public interface ModelQueryLanguagePackage extends EPackage
      * @generated
      */
     EClass XMETHOD_DECLARATION = eINSTANCE.getXMethodDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Type Parameters</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XMETHOD_DECLARATION__TYPE_PARAMETERS = eINSTANCE.getXMethodDeclaration_TypeParameters();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.

@@ -164,7 +164,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXMethodDeclaration_Type()
+  public EReference getXMethodDeclaration_TypeParameters()
   {
     return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(0);
   }
@@ -174,9 +174,19 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getXMethodDeclaration_Type()
+  {
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getXMethodDeclaration_Name()
   {
-    return (EAttribute)xMethodDeclarationEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)xMethodDeclarationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -186,7 +196,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    */
   public EReference getXMethodDeclaration_Parameters()
   {
-    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(2);
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -196,7 +206,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    */
   public EReference getXMethodDeclaration_Body()
   {
-    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(3);
+    return (EReference)xMethodDeclarationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -235,6 +245,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
     createEReference(modelEClass, MODEL__BODY);
 
     xMethodDeclarationEClass = createEClass(XMETHOD_DECLARATION);
+    createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__TYPE_PARAMETERS);
     createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__TYPE);
     createEAttribute(xMethodDeclarationEClass, XMETHOD_DECLARATION__NAME);
     createEReference(xMethodDeclarationEClass, XMETHOD_DECLARATION__PARAMETERS);
@@ -283,6 +294,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
     initEReference(getModel_Body(), theXbasePackage.getXBlockExpression(), null, "body", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(xMethodDeclarationEClass, XMethodDeclaration.class, "XMethodDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXMethodDeclaration_TypeParameters(), theTypesPackage.getJvmTypeParameter(), null, "typeParameters", null, 0, -1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXMethodDeclaration_Type(), theTypesPackage.getJvmTypeReference(), null, "type", null, 0, 1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getXMethodDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXMethodDeclaration_Parameters(), theTypesPackage.getJvmFormalParameter(), null, "parameters", null, 0, -1, XMethodDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

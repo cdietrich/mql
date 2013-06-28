@@ -11,23 +11,25 @@ import org.eclipse.xtext.common.types.JvmFormalParameter;
 import org.eclipse.xtext.common.types.JvmGenericType;
 import org.eclipse.xtext.common.types.JvmMember;
 import org.eclipse.xtext.common.types.JvmOperation;
+import org.eclipse.xtext.common.types.JvmTypeParameter;
 import org.eclipse.xtext.common.types.JvmTypeReference;
 import org.eclipse.xtext.common.types.util.TypeReferences;
 import org.eclipse.xtext.mqrepl.IModelQueryConstants;
+import org.eclipse.xtext.mqrepl.jvmmodel.ModelQueryLanguageJvmModelInferrerBase;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.xbase.XBlockExpression;
 import org.eclipse.xtext.xbase.XExpression;
-import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer;
 import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor;
+import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor.IPostIndexingInitializing;
 import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 @SuppressWarnings("all")
-public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
+public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmModelInferrerBase {
   @Inject
   @Extension
   private JvmTypesBuilder _jvmTypesBuilder;
@@ -37,6 +39,8 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
   private TypeReferences _typeReferences;
   
   protected void _infer(final Model model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
+    JvmGenericType _class = this._jvmTypesBuilder.toClass(model, IModelQueryConstants.INFERRED_CLASS_NAME);
+    IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
         public void apply(final JvmGenericType it) {
           EList<JvmMember> _members = it.getMembers();
@@ -86,6 +90,8 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
                     JvmFormalParameter _parameter = ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.toParameter(p, _name, _parameterType);
                     ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter);
                   }
+                  EList<JvmTypeParameter> _typeParameters = op.getTypeParameters();
+                  ModelQueryLanguageJvmModelInferrer.this.copyAndFixTypeParameters(_typeParameters, it);
                   XExpression _body = op.getBody();
                   ModelQueryLanguageJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _body);
                 }
@@ -95,8 +101,7 @@ public class ModelQueryLanguageJvmModelInferrer extends AbstractModelInferrer {
           }
         }
       };
-    JvmGenericType _class = this._jvmTypesBuilder.toClass(model, IModelQueryConstants.INFERRED_CLASS_NAME, _function);
-    acceptor.<JvmGenericType>accept(_class);
+    _accept.initializeLater(_function);
   }
   
   public void infer(final EObject model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
