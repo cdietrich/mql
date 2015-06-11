@@ -19,6 +19,7 @@ import org.eclipse.xtext.xbase.XExpression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getTypeParameters <em>Type Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getType <em>Type</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.xtext.xbase.XExpression;
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getXMethodDeclaration()
  * @model

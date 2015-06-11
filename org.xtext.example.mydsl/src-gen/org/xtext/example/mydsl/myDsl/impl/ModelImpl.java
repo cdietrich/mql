@@ -26,10 +26,10 @@ import org.xtext.example.mydsl.myDsl.MyDslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.ModelImpl#getEntities <em>Entities</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

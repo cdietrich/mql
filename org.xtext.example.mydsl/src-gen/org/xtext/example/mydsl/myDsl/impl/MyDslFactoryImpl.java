@@ -31,7 +31,7 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     try
     {
-      MyDslFactory theMyDslFactory = (MyDslFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.xtext.org/example/mydsl/MyDsl"); 
+      MyDslFactory theMyDslFactory = (MyDslFactory)EPackage.Registry.INSTANCE.getEFactory(MyDslPackage.eNS_URI);
       if (theMyDslFactory != null)
       {
         return theMyDslFactory;

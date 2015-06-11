@@ -10,10 +10,10 @@ package org.xtext.example.mydsl.myDsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Attribute#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getAttribute()
  * @model

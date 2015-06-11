@@ -33,6 +33,7 @@ import org.eclipse.xtext.xbase.XExpression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getTypeParameters <em>Type Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getType <em>Type</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.xtext.xbase.XExpression;
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.XMethodDeclarationImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

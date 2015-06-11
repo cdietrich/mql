@@ -17,12 +17,12 @@ import org.eclipse.xtext.xtype.XImportSection;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getImports <em>Imports</em>}</li>
+ *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getImportSection <em>Import Section</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getMethods <em>Methods</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getModel()
  * @model
@@ -31,30 +31,30 @@ import org.eclipse.xtext.xtype.XImportSection;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Imports</b></em>' containment reference.
+   * Returns the value of the '<em><b>Import Section</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Imports</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Import Section</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Imports</em>' containment reference.
-   * @see #setImports(XImportSection)
-   * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getModel_Imports()
+   * @return the value of the '<em>Import Section</em>' containment reference.
+   * @see #setImportSection(XImportSection)
+   * @see org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage#getModel_ImportSection()
    * @model containment="true"
    * @generated
    */
-  XImportSection getImports();
+  XImportSection getImportSection();
 
   /**
-   * Sets the value of the '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getImports <em>Imports</em>}' containment reference.
+   * Sets the value of the '{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.Model#getImportSection <em>Import Section</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Imports</em>' containment reference.
-   * @see #getImports()
+   * @param value the new value of the '<em>Import Section</em>' containment reference.
+   * @see #getImportSection()
    * @generated
    */
-  void setImports(XImportSection value);
+  void setImportSection(XImportSection value);
 
   /**
    * Returns the value of the '<em><b>Methods</b></em>' containment reference list.

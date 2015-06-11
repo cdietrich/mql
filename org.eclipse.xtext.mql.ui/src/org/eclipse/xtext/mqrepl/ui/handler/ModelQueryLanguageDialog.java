@@ -1,6 +1,7 @@
 package org.eclipse.xtext.mqrepl.ui.handler;
 
 import org.eclipse.jface.dialogs.TitleAreaDialog;
+import org.eclipse.jface.text.source.LineNumberRulerColumn;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Composite;
@@ -41,10 +42,12 @@ public class ModelQueryLanguageDialog extends TitleAreaDialog {
 	@Override
 	protected Control createDialogArea(Composite parent) {
 		Composite composite = (Composite) super.createDialogArea(parent);
-		embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider).readOnly().withParent(composite);
+		embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider).showErrorAndWarningAnnotations().readOnly().withParent(composite);
 		embeddedEditor.createPartialEditor();
 		configuration.getHighlightingHelper().install(embeddedEditor.getConfiguration(), embeddedEditor.getViewer());
 		embeddedEditor.getViewer().getControl().setFont(new Font(Display.getDefault(), FONT_NAME, FONT_SIZE, SWT.NORMAL));
+		LineNumberRulerColumn lineNumberRulerColumn = new LineNumberRulerColumn();
+		embeddedEditor.getViewer().addVerticalRulerColumn(lineNumberRulerColumn); 
 		embeddedEditor.getDocument().set(content);
 		composite.pack();
 		return composite;

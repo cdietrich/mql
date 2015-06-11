@@ -140,8 +140,10 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX), resourceDescriptions);
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INJECTOR), injector);
-		for (XImportDeclaration i : m.getImports().getImportDeclarations()) {
-			data.add(serializer.serialize(i).trim());
+		if (m.getImportSection() != null) {
+			for (XImportDeclaration i : m.getImportSection().getImportDeclarations()) {
+				data.add(serializer.serialize(i).trim());
+			}
 		}
 		for (XMethodDeclaration d : m.getMethods()) {
 			data.add(serializer.serialize(d).trim());

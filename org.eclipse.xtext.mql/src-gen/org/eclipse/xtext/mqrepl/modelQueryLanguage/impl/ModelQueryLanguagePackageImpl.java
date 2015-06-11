@@ -124,7 +124,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Imports()
+  public EReference getModel_ImportSection()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -240,7 +240,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__IMPORTS);
+    createEReference(modelEClass, MODEL__IMPORT_SECTION);
     createEReference(modelEClass, MODEL__METHODS);
     createEReference(modelEClass, MODEL__BODY);
 
@@ -289,7 +289,7 @@ public class ModelQueryLanguagePackageImpl extends EPackageImpl implements Model
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Imports(), theXtypePackage.getXImportSection(), null, "imports", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_ImportSection(), theXtypePackage.getXImportSection(), null, "importSection", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Methods(), this.getXMethodDeclaration(), null, "methods", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Body(), theXbasePackage.getXBlockExpression(), null, "body", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

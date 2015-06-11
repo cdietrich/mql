@@ -32,26 +32,26 @@ import org.eclipse.xtext.xtype.XImportSection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getImportSection <em>Import Section</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getMethods <em>Methods</em>}</li>
  *   <li>{@link org.eclipse.xtext.mqrepl.modelQueryLanguage.impl.ModelImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference.
+   * The cached value of the '{@link #getImportSection() <em>Import Section</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImports()
+   * @see #getImportSection()
    * @generated
    * @ordered
    */
-  protected XImportSection imports;
+  protected XImportSection importSection;
 
   /**
    * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
@@ -99,9 +99,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public XImportSection getImports()
+  public XImportSection getImportSection()
   {
-    return imports;
+    return importSection;
   }
 
   /**
@@ -109,13 +109,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetImports(XImportSection newImports, NotificationChain msgs)
+  public NotificationChain basicSetImportSection(XImportSection newImportSection, NotificationChain msgs)
   {
-    XImportSection oldImports = imports;
-    imports = newImports;
+    XImportSection oldImportSection = importSection;
+    importSection = newImportSection;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORTS, oldImports, newImports);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORT_SECTION, oldImportSection, newImportSection);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -126,20 +126,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImports(XImportSection newImports)
+  public void setImportSection(XImportSection newImportSection)
   {
-    if (newImports != imports)
+    if (newImportSection != importSection)
     {
       NotificationChain msgs = null;
-      if (imports != null)
-        msgs = ((InternalEObject)imports).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORTS, null, msgs);
-      if (newImports != null)
-        msgs = ((InternalEObject)newImports).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORTS, null, msgs);
-      msgs = basicSetImports(newImports, msgs);
+      if (importSection != null)
+        msgs = ((InternalEObject)importSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORT_SECTION, null, msgs);
+      if (newImportSection != null)
+        msgs = ((InternalEObject)newImportSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelQueryLanguagePackage.MODEL__IMPORT_SECTION, null, msgs);
+      msgs = basicSetImportSection(newImportSection, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORTS, newImports, newImports));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelQueryLanguagePackage.MODEL__IMPORT_SECTION, newImportSection, newImportSection));
   }
 
   /**
@@ -214,8 +214,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        return basicSetImports(null, msgs);
+      case ModelQueryLanguagePackage.MODEL__IMPORT_SECTION:
+        return basicSetImportSection(null, msgs);
       case ModelQueryLanguagePackage.MODEL__METHODS:
         return ((InternalEList<?>)getMethods()).basicRemove(otherEnd, msgs);
       case ModelQueryLanguagePackage.MODEL__BODY:
@@ -234,8 +234,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        return getImports();
+      case ModelQueryLanguagePackage.MODEL__IMPORT_SECTION:
+        return getImportSection();
       case ModelQueryLanguagePackage.MODEL__METHODS:
         return getMethods();
       case ModelQueryLanguagePackage.MODEL__BODY:
@@ -255,8 +255,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        setImports((XImportSection)newValue);
+      case ModelQueryLanguagePackage.MODEL__IMPORT_SECTION:
+        setImportSection((XImportSection)newValue);
         return;
       case ModelQueryLanguagePackage.MODEL__METHODS:
         getMethods().clear();
@@ -279,8 +279,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        setImports((XImportSection)null);
+      case ModelQueryLanguagePackage.MODEL__IMPORT_SECTION:
+        setImportSection((XImportSection)null);
         return;
       case ModelQueryLanguagePackage.MODEL__METHODS:
         getMethods().clear();
@@ -302,8 +302,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ModelQueryLanguagePackage.MODEL__IMPORTS:
-        return imports != null;
+      case ModelQueryLanguagePackage.MODEL__IMPORT_SECTION:
+        return importSection != null;
       case ModelQueryLanguagePackage.MODEL__METHODS:
         return methods != null && !methods.isEmpty();
       case ModelQueryLanguagePackage.MODEL__BODY:
