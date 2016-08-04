@@ -4,7 +4,7 @@
     editorDirectory="/org.xtext.example.mydsl.editor/src" modelPluginID="org.xtext.example.mydsl"
     forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.example.mydsl.edit"
-    editorPluginID="org.xtext.example.mydsl.editor" runtimeVersion="2.10">
+    editorPluginID="org.xtext.example.mydsl.editor" runtimeVersion="2.12">
   <genPackages prefix="MyDsl" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
       ecorePackage="MyDsl.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//Type">

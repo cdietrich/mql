@@ -13,14 +13,14 @@ public class ModelQueryLanguageUiModule extends org.eclipse.xtext.mqrepl.ui.Abst
 		super(plugin);
 	}
 
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public Class<? extends org.eclipse.xtext.common.types.access.IJvmTypeProvider.Factory> bindIJvmTypeProvider$Factory() {
-			return org.eclipse.xtext.common.types.access.ClasspathTypeProviderFactory.class;
-		}
-
-		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-		public Class<? extends org.eclipse.xtext.common.types.xtext.AbstractTypeScopeProvider> bindAbstractTypeScopeProvider() {
-			return org.eclipse.xtext.common.types.xtext.ClasspathBasedTypeScopeProvider.class;
-		}
+//		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
+//		public Class<? extends org.eclipse.xtext.common.types.access.IJvmTypeProvider.Factory> bindIJvmTypeProvider$Factory() {
+//			return org.eclipse.xtext.common.types.access.ClasspathTypeProviderFactory.class;
+//		}
+//
+//		// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
+//		public Class<? extends org.eclipse.xtext.common.types.xtext.AbstractTypeScopeProvider> bindAbstractTypeScopeProvider() {
+//			return org.eclipse.xtext.common.types.xtext.ClasspathBasedTypeScopeProvider.class;
+//		}
 	
 }

@@ -4,7 +4,7 @@
     editorDirectory="/org.eclipse.xtext.mql.editor/src" modelPluginID="org.eclipse.xtext.mql"
     forceOverwrite="true" modelName="ModelQueryLanguage" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="6.0" copyrightFields="false" editPluginID="org.eclipse.xtext.mql.edit"
-    editorPluginID="org.eclipse.xtext.mql.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+    editorPluginID="org.eclipse.xtext.mql.editor" runtimeVersion="2.12" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
   <genPackages prefix="ModelQueryLanguage" basePackage="org.eclipse.xtext.mqrepl"
       disposableProviderFactory="true" ecorePackage="ModelQueryLanguage.ecore#/">
     <genClasses ecoreClass="ModelQueryLanguage.ecore#//Model">

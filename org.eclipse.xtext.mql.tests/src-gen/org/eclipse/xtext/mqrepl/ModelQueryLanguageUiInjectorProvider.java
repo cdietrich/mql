@@ -8,10 +8,10 @@ import org.eclipse.xtext.junit4.IInjectorProvider;
 import com.google.inject.Injector;
 
 public class ModelQueryLanguageUiInjectorProvider implements IInjectorProvider {
-	
+
 	@Override
 	public Injector getInjector() {
 		return org.eclipse.xtext.mqrepl.ui.internal.ModelQueryLanguageActivator.getInstance().getInjector("org.eclipse.xtext.mqrepl.ModelQueryLanguage");
 	}
-	
+
 }

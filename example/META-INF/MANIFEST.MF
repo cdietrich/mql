@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: example
+Bundle-SymbolicName: example
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.xtext.example.mydsl;bundle-version="1.0.0"

@@ -26,5 +26,6 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.xtext.mqrepl.ui.contentassist,
  org.eclipse.xtext.mqrepl.ui.contentassist.antlr,
  org.eclipse.xtext.mqrepl.ui.internal,
- org.eclipse.xtext.mqrepl.ui.quickfix
+ org.eclipse.xtext.mqrepl.ui.quickfix,
+ org.eclipse.xtext.mqrepl.ui.contentassist.antlr.internal
 Bundle-Activator: org.eclipse.xtext.mqrepl.ui.internal.ModelQueryLanguageActivator

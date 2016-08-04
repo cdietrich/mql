@@ -91,7 +91,7 @@ ruleModel returns [EObject current=null]
        			$current, 
        			"entities",
         		lv_entities_0_0, 
-        		"Entity");
+        		"org.xtext.example.mydsl.MyDsl.Entity");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -135,7 +135,7 @@ ruleEntity returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -156,7 +156,7 @@ ruleEntity returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_3_0, 
-        		"Feature");
+        		"org.xtext.example.mydsl.MyDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -244,7 +244,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -265,7 +265,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_3_0, 
-        		"Type");
+        		"org.xtext.example.mydsl.MyDsl.Type");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -309,7 +309,7 @@ ruleReference returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )

@@ -109,15 +109,15 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g"; }
+    public String getGrammarFileName() { return "InternalModelQueryLanguage.g"; }
 
     // $ANTLR start "T__13"
     public final void mT__13() throws RecognitionException {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:11:7: ( '=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:11:9: '='
+            // InternalModelQueryLanguage.g:11:7: ( '=' )
+            // InternalModelQueryLanguage.g:11:9: '='
             {
             match('='); 
 
@@ -136,8 +136,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:12:7: ( '||' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:12:9: '||'
+            // InternalModelQueryLanguage.g:12:7: ( '||' )
+            // InternalModelQueryLanguage.g:12:9: '||'
             {
             match("||"); 
 
@@ -157,8 +157,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:13:7: ( '&&' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:13:9: '&&'
+            // InternalModelQueryLanguage.g:13:7: ( '&&' )
+            // InternalModelQueryLanguage.g:13:9: '&&'
             {
             match("&&"); 
 
@@ -178,8 +178,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:14:7: ( '+=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:14:9: '+='
+            // InternalModelQueryLanguage.g:14:7: ( '+=' )
+            // InternalModelQueryLanguage.g:14:9: '+='
             {
             match("+="); 
 
@@ -199,8 +199,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:15:7: ( '-=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:15:9: '-='
+            // InternalModelQueryLanguage.g:15:7: ( '-=' )
+            // InternalModelQueryLanguage.g:15:9: '-='
             {
             match("-="); 
 
@@ -220,8 +220,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:16:7: ( '*=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:16:9: '*='
+            // InternalModelQueryLanguage.g:16:7: ( '*=' )
+            // InternalModelQueryLanguage.g:16:9: '*='
             {
             match("*="); 
 
@@ -241,8 +241,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:17:7: ( '/=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:17:9: '/='
+            // InternalModelQueryLanguage.g:17:7: ( '/=' )
+            // InternalModelQueryLanguage.g:17:9: '/='
             {
             match("/="); 
 
@@ -262,8 +262,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:18:7: ( '%=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:18:9: '%='
+            // InternalModelQueryLanguage.g:18:7: ( '%=' )
+            // InternalModelQueryLanguage.g:18:9: '%='
             {
             match("%="); 
 
@@ -283,8 +283,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:19:7: ( '==' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:19:9: '=='
+            // InternalModelQueryLanguage.g:19:7: ( '==' )
+            // InternalModelQueryLanguage.g:19:9: '=='
             {
             match("=="); 
 
@@ -304,8 +304,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20:7: ( '!=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20:9: '!='
+            // InternalModelQueryLanguage.g:20:7: ( '!=' )
+            // InternalModelQueryLanguage.g:20:9: '!='
             {
             match("!="); 
 
@@ -325,8 +325,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:21:7: ( '===' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:21:9: '==='
+            // InternalModelQueryLanguage.g:21:7: ( '===' )
+            // InternalModelQueryLanguage.g:21:9: '==='
             {
             match("==="); 
 
@@ -346,8 +346,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:22:7: ( '!==' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:22:9: '!=='
+            // InternalModelQueryLanguage.g:22:7: ( '!==' )
+            // InternalModelQueryLanguage.g:22:9: '!=='
             {
             match("!=="); 
 
@@ -367,8 +367,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:23:7: ( '>=' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:23:9: '>='
+            // InternalModelQueryLanguage.g:23:7: ( '>=' )
+            // InternalModelQueryLanguage.g:23:9: '>='
             {
             match(">="); 
 
@@ -388,8 +388,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:24:7: ( '>' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:24:9: '>'
+            // InternalModelQueryLanguage.g:24:7: ( '>' )
+            // InternalModelQueryLanguage.g:24:9: '>'
             {
             match('>'); 
 
@@ -408,8 +408,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:25:7: ( '<' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:25:9: '<'
+            // InternalModelQueryLanguage.g:25:7: ( '<' )
+            // InternalModelQueryLanguage.g:25:9: '<'
             {
             match('<'); 
 
@@ -428,8 +428,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:26:7: ( '->' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:26:9: '->'
+            // InternalModelQueryLanguage.g:26:7: ( '->' )
+            // InternalModelQueryLanguage.g:26:9: '->'
             {
             match("->"); 
 
@@ -449,8 +449,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:27:7: ( '..<' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:27:9: '..<'
+            // InternalModelQueryLanguage.g:27:7: ( '..<' )
+            // InternalModelQueryLanguage.g:27:9: '..<'
             {
             match("..<"); 
 
@@ -470,8 +470,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:28:7: ( '..' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:28:9: '..'
+            // InternalModelQueryLanguage.g:28:7: ( '..' )
+            // InternalModelQueryLanguage.g:28:9: '..'
             {
             match(".."); 
 
@@ -491,8 +491,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:29:7: ( '=>' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:29:9: '=>'
+            // InternalModelQueryLanguage.g:29:7: ( '=>' )
+            // InternalModelQueryLanguage.g:29:9: '=>'
             {
             match("=>"); 
 
@@ -512,8 +512,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:30:7: ( '<>' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:30:9: '<>'
+            // InternalModelQueryLanguage.g:30:7: ( '<>' )
+            // InternalModelQueryLanguage.g:30:9: '<>'
             {
             match("<>"); 
 
@@ -533,8 +533,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:31:7: ( '?:' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:31:9: '?:'
+            // InternalModelQueryLanguage.g:31:7: ( '?:' )
+            // InternalModelQueryLanguage.g:31:9: '?:'
             {
             match("?:"); 
 
@@ -554,8 +554,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:32:7: ( '+' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:32:9: '+'
+            // InternalModelQueryLanguage.g:32:7: ( '+' )
+            // InternalModelQueryLanguage.g:32:9: '+'
             {
             match('+'); 
 
@@ -574,8 +574,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:33:7: ( '-' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:33:9: '-'
+            // InternalModelQueryLanguage.g:33:7: ( '-' )
+            // InternalModelQueryLanguage.g:33:9: '-'
             {
             match('-'); 
 
@@ -594,8 +594,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:34:7: ( '*' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:34:9: '*'
+            // InternalModelQueryLanguage.g:34:7: ( '*' )
+            // InternalModelQueryLanguage.g:34:9: '*'
             {
             match('*'); 
 
@@ -614,8 +614,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:35:7: ( '**' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:35:9: '**'
+            // InternalModelQueryLanguage.g:35:7: ( '**' )
+            // InternalModelQueryLanguage.g:35:9: '**'
             {
             match("**"); 
 
@@ -635,8 +635,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:36:7: ( '/' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:36:9: '/'
+            // InternalModelQueryLanguage.g:36:7: ( '/' )
+            // InternalModelQueryLanguage.g:36:9: '/'
             {
             match('/'); 
 
@@ -655,8 +655,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:37:7: ( '%' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:37:9: '%'
+            // InternalModelQueryLanguage.g:37:7: ( '%' )
+            // InternalModelQueryLanguage.g:37:9: '%'
             {
             match('%'); 
 
@@ -675,8 +675,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:38:7: ( '!' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:38:9: '!'
+            // InternalModelQueryLanguage.g:38:7: ( '!' )
+            // InternalModelQueryLanguage.g:38:9: '!'
             {
             match('!'); 
 
@@ -695,8 +695,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:39:7: ( '++' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:39:9: '++'
+            // InternalModelQueryLanguage.g:39:7: ( '++' )
+            // InternalModelQueryLanguage.g:39:9: '++'
             {
             match("++"); 
 
@@ -716,8 +716,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:40:7: ( '--' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:40:9: '--'
+            // InternalModelQueryLanguage.g:40:7: ( '--' )
+            // InternalModelQueryLanguage.g:40:9: '--'
             {
             match("--"); 
 
@@ -737,8 +737,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:41:7: ( '.' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:41:9: '.'
+            // InternalModelQueryLanguage.g:41:7: ( '.' )
+            // InternalModelQueryLanguage.g:41:9: '.'
             {
             match('.'); 
 
@@ -757,8 +757,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:42:7: ( 'val' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:42:9: 'val'
+            // InternalModelQueryLanguage.g:42:7: ( 'val' )
+            // InternalModelQueryLanguage.g:42:9: 'val'
             {
             match("val"); 
 
@@ -778,8 +778,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:43:7: ( 'extends' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:43:9: 'extends'
+            // InternalModelQueryLanguage.g:43:7: ( 'extends' )
+            // InternalModelQueryLanguage.g:43:9: 'extends'
             {
             match("extends"); 
 
@@ -799,8 +799,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:44:7: ( 'static' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:44:9: 'static'
+            // InternalModelQueryLanguage.g:44:7: ( 'static' )
+            // InternalModelQueryLanguage.g:44:9: 'static'
             {
             match("static"); 
 
@@ -820,8 +820,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:45:7: ( 'import' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:45:9: 'import'
+            // InternalModelQueryLanguage.g:45:7: ( 'import' )
+            // InternalModelQueryLanguage.g:45:9: 'import'
             {
             match("import"); 
 
@@ -841,8 +841,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:46:7: ( 'extension' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:46:9: 'extension'
+            // InternalModelQueryLanguage.g:46:7: ( 'extension' )
+            // InternalModelQueryLanguage.g:46:9: 'extension'
             {
             match("extension"); 
 
@@ -862,8 +862,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:47:7: ( 'super' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:47:9: 'super'
+            // InternalModelQueryLanguage.g:47:7: ( 'super' )
+            // InternalModelQueryLanguage.g:47:9: 'super'
             {
             match("super"); 
 
@@ -883,8 +883,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:48:7: ( 'false' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:48:9: 'false'
+            // InternalModelQueryLanguage.g:48:7: ( 'false' )
+            // InternalModelQueryLanguage.g:48:9: 'false'
             {
             match("false"); 
 
@@ -904,8 +904,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:49:7: ( ';' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:49:9: ';'
+            // InternalModelQueryLanguage.g:49:7: ( ';' )
+            // InternalModelQueryLanguage.g:49:9: ';'
             {
             match(';'); 
 
@@ -924,8 +924,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:50:7: ( 'def' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:50:9: 'def'
+            // InternalModelQueryLanguage.g:50:7: ( 'def' )
+            // InternalModelQueryLanguage.g:50:9: 'def'
             {
             match("def"); 
 
@@ -945,8 +945,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:51:7: ( '(' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:51:9: '('
+            // InternalModelQueryLanguage.g:51:7: ( '(' )
+            // InternalModelQueryLanguage.g:51:9: '('
             {
             match('('); 
 
@@ -965,8 +965,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:52:7: ( ')' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:52:9: ')'
+            // InternalModelQueryLanguage.g:52:7: ( ')' )
+            // InternalModelQueryLanguage.g:52:9: ')'
             {
             match(')'); 
 
@@ -985,8 +985,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:53:7: ( ',' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:53:9: ','
+            // InternalModelQueryLanguage.g:53:7: ( ',' )
+            // InternalModelQueryLanguage.g:53:9: ','
             {
             match(','); 
 
@@ -1005,8 +1005,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:54:7: ( 'instanceof' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:54:9: 'instanceof'
+            // InternalModelQueryLanguage.g:54:7: ( 'instanceof' )
+            // InternalModelQueryLanguage.g:54:9: 'instanceof'
             {
             match("instanceof"); 
 
@@ -1026,8 +1026,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:55:7: ( 'as' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:55:9: 'as'
+            // InternalModelQueryLanguage.g:55:7: ( 'as' )
+            // InternalModelQueryLanguage.g:55:9: 'as'
             {
             match("as"); 
 
@@ -1047,8 +1047,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:56:7: ( '#' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:56:9: '#'
+            // InternalModelQueryLanguage.g:56:7: ( '#' )
+            // InternalModelQueryLanguage.g:56:9: '#'
             {
             match('#'); 
 
@@ -1067,8 +1067,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:57:7: ( '{' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:57:9: '{'
+            // InternalModelQueryLanguage.g:57:7: ( '{' )
+            // InternalModelQueryLanguage.g:57:9: '{'
             {
             match('{'); 
 
@@ -1087,8 +1087,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:58:7: ( '}' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:58:9: '}'
+            // InternalModelQueryLanguage.g:58:7: ( '}' )
+            // InternalModelQueryLanguage.g:58:9: '}'
             {
             match('}'); 
 
@@ -1107,8 +1107,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:59:7: ( '[' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:59:9: '['
+            // InternalModelQueryLanguage.g:59:7: ( '[' )
+            // InternalModelQueryLanguage.g:59:9: '['
             {
             match('['); 
 
@@ -1127,8 +1127,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:60:7: ( ']' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:60:9: ']'
+            // InternalModelQueryLanguage.g:60:7: ( ']' )
+            // InternalModelQueryLanguage.g:60:9: ']'
             {
             match(']'); 
 
@@ -1147,8 +1147,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:61:7: ( 'if' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:61:9: 'if'
+            // InternalModelQueryLanguage.g:61:7: ( 'if' )
+            // InternalModelQueryLanguage.g:61:9: 'if'
             {
             match("if"); 
 
@@ -1168,8 +1168,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:62:7: ( 'else' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:62:9: 'else'
+            // InternalModelQueryLanguage.g:62:7: ( 'else' )
+            // InternalModelQueryLanguage.g:62:9: 'else'
             {
             match("else"); 
 
@@ -1189,8 +1189,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:63:7: ( 'switch' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:63:9: 'switch'
+            // InternalModelQueryLanguage.g:63:7: ( 'switch' )
+            // InternalModelQueryLanguage.g:63:9: 'switch'
             {
             match("switch"); 
 
@@ -1210,8 +1210,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:64:7: ( ':' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:64:9: ':'
+            // InternalModelQueryLanguage.g:64:7: ( ':' )
+            // InternalModelQueryLanguage.g:64:9: ':'
             {
             match(':'); 
 
@@ -1230,8 +1230,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:65:7: ( 'default' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:65:9: 'default'
+            // InternalModelQueryLanguage.g:65:7: ( 'default' )
+            // InternalModelQueryLanguage.g:65:9: 'default'
             {
             match("default"); 
 
@@ -1251,8 +1251,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:66:7: ( 'case' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:66:9: 'case'
+            // InternalModelQueryLanguage.g:66:7: ( 'case' )
+            // InternalModelQueryLanguage.g:66:9: 'case'
             {
             match("case"); 
 
@@ -1272,8 +1272,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:67:7: ( 'for' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:67:9: 'for'
+            // InternalModelQueryLanguage.g:67:7: ( 'for' )
+            // InternalModelQueryLanguage.g:67:9: 'for'
             {
             match("for"); 
 
@@ -1293,8 +1293,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:68:7: ( 'while' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:68:9: 'while'
+            // InternalModelQueryLanguage.g:68:7: ( 'while' )
+            // InternalModelQueryLanguage.g:68:9: 'while'
             {
             match("while"); 
 
@@ -1314,8 +1314,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:69:7: ( 'do' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:69:9: 'do'
+            // InternalModelQueryLanguage.g:69:7: ( 'do' )
+            // InternalModelQueryLanguage.g:69:9: 'do'
             {
             match("do"); 
 
@@ -1335,8 +1335,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:70:7: ( 'new' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:70:9: 'new'
+            // InternalModelQueryLanguage.g:70:7: ( 'new' )
+            // InternalModelQueryLanguage.g:70:9: 'new'
             {
             match("new"); 
 
@@ -1356,8 +1356,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:71:7: ( 'null' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:71:9: 'null'
+            // InternalModelQueryLanguage.g:71:7: ( 'null' )
+            // InternalModelQueryLanguage.g:71:9: 'null'
             {
             match("null"); 
 
@@ -1377,8 +1377,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:72:7: ( 'typeof' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:72:9: 'typeof'
+            // InternalModelQueryLanguage.g:72:7: ( 'typeof' )
+            // InternalModelQueryLanguage.g:72:9: 'typeof'
             {
             match("typeof"); 
 
@@ -1398,8 +1398,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:73:7: ( 'throw' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:73:9: 'throw'
+            // InternalModelQueryLanguage.g:73:7: ( 'throw' )
+            // InternalModelQueryLanguage.g:73:9: 'throw'
             {
             match("throw"); 
 
@@ -1419,8 +1419,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:74:7: ( 'return' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:74:9: 'return'
+            // InternalModelQueryLanguage.g:74:7: ( 'return' )
+            // InternalModelQueryLanguage.g:74:9: 'return'
             {
             match("return"); 
 
@@ -1440,8 +1440,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:75:7: ( 'try' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:75:9: 'try'
+            // InternalModelQueryLanguage.g:75:7: ( 'try' )
+            // InternalModelQueryLanguage.g:75:9: 'try'
             {
             match("try"); 
 
@@ -1461,8 +1461,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:76:7: ( 'finally' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:76:9: 'finally'
+            // InternalModelQueryLanguage.g:76:7: ( 'finally' )
+            // InternalModelQueryLanguage.g:76:9: 'finally'
             {
             match("finally"); 
 
@@ -1482,8 +1482,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:77:7: ( 'synchronized' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:77:9: 'synchronized'
+            // InternalModelQueryLanguage.g:77:7: ( 'synchronized' )
+            // InternalModelQueryLanguage.g:77:9: 'synchronized'
             {
             match("synchronized"); 
 
@@ -1503,8 +1503,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:78:7: ( 'catch' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:78:9: 'catch'
+            // InternalModelQueryLanguage.g:78:7: ( 'catch' )
+            // InternalModelQueryLanguage.g:78:9: 'catch'
             {
             match("catch"); 
 
@@ -1524,8 +1524,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:79:7: ( '?' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:79:9: '?'
+            // InternalModelQueryLanguage.g:79:7: ( '?' )
+            // InternalModelQueryLanguage.g:79:9: '?'
             {
             match('?'); 
 
@@ -1544,8 +1544,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:80:7: ( '&' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:80:9: '&'
+            // InternalModelQueryLanguage.g:80:7: ( '&' )
+            // InternalModelQueryLanguage.g:80:9: '&'
             {
             match('&'); 
 
@@ -1564,8 +1564,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:81:7: ( '::' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:81:9: '::'
+            // InternalModelQueryLanguage.g:81:7: ( '::' )
+            // InternalModelQueryLanguage.g:81:9: '::'
             {
             match("::"); 
 
@@ -1585,8 +1585,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:82:7: ( '?.' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:82:9: '?.'
+            // InternalModelQueryLanguage.g:82:7: ( '?.' )
+            // InternalModelQueryLanguage.g:82:9: '?.'
             {
             match("?."); 
 
@@ -1606,8 +1606,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:83:7: ( '|' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:83:9: '|'
+            // InternalModelQueryLanguage.g:83:7: ( '|' )
+            // InternalModelQueryLanguage.g:83:9: '|'
             {
             match('|'); 
 
@@ -1626,8 +1626,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:84:7: ( 'var' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:84:9: 'var'
+            // InternalModelQueryLanguage.g:84:7: ( 'var' )
+            // InternalModelQueryLanguage.g:84:9: 'var'
             {
             match("var"); 
 
@@ -1647,8 +1647,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:85:7: ( 'true' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:85:9: 'true'
+            // InternalModelQueryLanguage.g:85:7: ( 'true' )
+            // InternalModelQueryLanguage.g:85:9: 'true'
             {
             match("true"); 
 
@@ -1668,10 +1668,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // InternalModelQueryLanguage.g:20488:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
+            // InternalModelQueryLanguage.g:20488:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             {
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:12: ( '0x' | '0X' )
+            // InternalModelQueryLanguage.g:20488:12: ( '0x' | '0X' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1699,7 +1699,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:13: '0x'
+                    // InternalModelQueryLanguage.g:20488:13: '0x'
                     {
                     match("0x"); 
 
@@ -1707,7 +1707,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:18: '0X'
+                    // InternalModelQueryLanguage.g:20488:18: '0X'
                     {
                     match("0X"); 
 
@@ -1717,7 +1717,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
             }
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
+            // InternalModelQueryLanguage.g:20488:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
             int cnt2=0;
             loop2:
             do {
@@ -1731,7 +1731,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:
+            	    // InternalModelQueryLanguage.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='f') ) {
             	        input.consume();
@@ -1755,7 +1755,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                 cnt2++;
             } while (true);
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // InternalModelQueryLanguage.g:20488:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1764,10 +1764,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // InternalModelQueryLanguage.g:20488:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     {
                     match('#'); 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // InternalModelQueryLanguage.g:20488:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -1785,7 +1785,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:64: ( 'b' | 'B' ) ( 'i' | 'I' )
+                            // InternalModelQueryLanguage.g:20488:64: ( 'b' | 'B' ) ( 'i' | 'I' )
                             {
                             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                                 input.consume();
@@ -1809,7 +1809,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20488:84: ( 'l' | 'L' )
+                            // InternalModelQueryLanguage.g:20488:84: ( 'l' | 'L' )
                             {
                             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                                 input.consume();
@@ -1848,11 +1848,11 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20490:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20490:12: '0' .. '9' ( '0' .. '9' | '_' )*
+            // InternalModelQueryLanguage.g:20490:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
+            // InternalModelQueryLanguage.g:20490:12: '0' .. '9' ( '0' .. '9' | '_' )*
             {
             matchRange('0','9'); 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20490:21: ( '0' .. '9' | '_' )*
+            // InternalModelQueryLanguage.g:20490:21: ( '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1865,7 +1865,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:
+            	    // InternalModelQueryLanguage.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||input.LA(1)=='_' ) {
             	        input.consume();
@@ -1901,11 +1901,11 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // InternalModelQueryLanguage.g:20492:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
+            // InternalModelQueryLanguage.g:20492:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             {
             mRULE_INT(); 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+            // InternalModelQueryLanguage.g:20492:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1914,7 +1914,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // InternalModelQueryLanguage.g:20492:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -1925,7 +1925,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:36: ( '+' | '-' )?
+                    // InternalModelQueryLanguage.g:20492:36: ( '+' | '-' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1934,7 +1934,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:
+                            // InternalModelQueryLanguage.g:
                             {
                             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                                 input.consume();
@@ -1958,7 +1958,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
             }
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // InternalModelQueryLanguage.g:20492:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             int alt8=3;
             int LA8_0 = input.LA(1);
 
@@ -1970,7 +1970,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
+                    // InternalModelQueryLanguage.g:20492:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
                     {
                     if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                         input.consume();
@@ -1994,7 +1994,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20492:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
+                    // InternalModelQueryLanguage.g:20492:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
                     {
                     if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='d'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                         input.consume();
@@ -2027,10 +2027,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20494:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20494:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // InternalModelQueryLanguage.g:20494:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
+            // InternalModelQueryLanguage.g:20494:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20494:11: ( '^' )?
+            // InternalModelQueryLanguage.g:20494:11: ( '^' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2039,7 +2039,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20494:11: '^'
+                    // InternalModelQueryLanguage.g:20494:11: '^'
                     {
                     match('^'); 
 
@@ -2057,7 +2057,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20494:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // InternalModelQueryLanguage.g:20494:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             loop10:
             do {
                 int alt10=2;
@@ -2070,7 +2070,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:
+            	    // InternalModelQueryLanguage.g:
             	    {
             	    if ( input.LA(1)=='$'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -2106,10 +2106,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // InternalModelQueryLanguage.g:20496:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
+            // InternalModelQueryLanguage.g:20496:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             {
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // InternalModelQueryLanguage.g:20496:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -2127,10 +2127,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
+                    // InternalModelQueryLanguage.g:20496:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
                     {
                     match('\"'); 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalModelQueryLanguage.g:20496:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -2146,7 +2146,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:21: '\\\\' .
+                    	    // InternalModelQueryLanguage.g:20496:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2154,7 +2154,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalModelQueryLanguage.g:20496:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2174,7 +2174,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:44: ( '\"' )?
+                    // InternalModelQueryLanguage.g:20496:44: ( '\"' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -2183,7 +2183,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:44: '\"'
+                            // InternalModelQueryLanguage.g:20496:44: '\"'
                             {
                             match('\"'); 
 
@@ -2196,10 +2196,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
+                    // InternalModelQueryLanguage.g:20496:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
                     {
                     match('\''); 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalModelQueryLanguage.g:20496:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop13:
                     do {
                         int alt13=3;
@@ -2215,7 +2215,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:55: '\\\\' .
+                    	    // InternalModelQueryLanguage.g:20496:55: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2223,7 +2223,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:62: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalModelQueryLanguage.g:20496:62: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2243,7 +2243,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:79: ( '\\'' )?
+                    // InternalModelQueryLanguage.g:20496:79: ( '\\'' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -2252,7 +2252,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20496:79: '\\''
+                            // InternalModelQueryLanguage.g:20496:79: '\\''
                             {
                             match('\''); 
 
@@ -2283,12 +2283,12 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20498:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20498:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalModelQueryLanguage.g:20498:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalModelQueryLanguage.g:20498:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20498:24: ( options {greedy=false; } : . )*
+            // InternalModelQueryLanguage.g:20498:24: ( options {greedy=false; } : . )*
             loop16:
             do {
                 int alt16=2;
@@ -2313,7 +2313,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20498:52: .
+            	    // InternalModelQueryLanguage.g:20498:52: .
             	    {
             	    matchAny(); 
 
@@ -2343,12 +2343,12 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalModelQueryLanguage.g:20500:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalModelQueryLanguage.g:20500:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalModelQueryLanguage.g:20500:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -2361,7 +2361,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalModelQueryLanguage.g:20500:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2381,7 +2381,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:40: ( ( '\\r' )? '\\n' )?
+            // InternalModelQueryLanguage.g:20500:40: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2390,9 +2390,9 @@ public class InternalModelQueryLanguageLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:41: ( '\\r' )? '\\n'
+                    // InternalModelQueryLanguage.g:20500:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:41: ( '\\r' )?
+                    // InternalModelQueryLanguage.g:20500:41: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -2401,7 +2401,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20500:41: '\\r'
+                            // InternalModelQueryLanguage.g:20500:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2433,10 +2433,10 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20502:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20502:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalModelQueryLanguage.g:20502:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalModelQueryLanguage.g:20502:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20502:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalModelQueryLanguage.g:20502:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt20=0;
             loop20:
             do {
@@ -2450,7 +2450,7 @@ public class InternalModelQueryLanguageLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:
+            	    // InternalModelQueryLanguage.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -2490,8 +2490,8 @@ public class InternalModelQueryLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20504:16: ( . )
-            // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:20504:18: .
+            // InternalModelQueryLanguage.g:20504:16: ( . )
+            // InternalModelQueryLanguage.g:20504:18: .
             {
             matchAny(); 
 
@@ -2506,593 +2506,593 @@ public class InternalModelQueryLanguageLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalModelQueryLanguage.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt21=84;
         alt21 = dfa21.predict(input);
         switch (alt21) {
             case 1 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:10: T__13
+                // InternalModelQueryLanguage.g:1:10: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 2 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:16: T__14
+                // InternalModelQueryLanguage.g:1:16: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 3 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:22: T__15
+                // InternalModelQueryLanguage.g:1:22: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 4 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:28: T__16
+                // InternalModelQueryLanguage.g:1:28: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 5 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:34: T__17
+                // InternalModelQueryLanguage.g:1:34: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 6 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:40: T__18
+                // InternalModelQueryLanguage.g:1:40: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 7 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:46: T__19
+                // InternalModelQueryLanguage.g:1:46: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 8 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:52: T__20
+                // InternalModelQueryLanguage.g:1:52: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 9 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:58: T__21
+                // InternalModelQueryLanguage.g:1:58: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 10 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:64: T__22
+                // InternalModelQueryLanguage.g:1:64: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 11 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:70: T__23
+                // InternalModelQueryLanguage.g:1:70: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 12 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:76: T__24
+                // InternalModelQueryLanguage.g:1:76: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 13 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:82: T__25
+                // InternalModelQueryLanguage.g:1:82: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 14 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:88: T__26
+                // InternalModelQueryLanguage.g:1:88: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 15 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:94: T__27
+                // InternalModelQueryLanguage.g:1:94: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 16 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:100: T__28
+                // InternalModelQueryLanguage.g:1:100: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 17 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:106: T__29
+                // InternalModelQueryLanguage.g:1:106: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 18 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:112: T__30
+                // InternalModelQueryLanguage.g:1:112: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 19 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:118: T__31
+                // InternalModelQueryLanguage.g:1:118: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 20 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:124: T__32
+                // InternalModelQueryLanguage.g:1:124: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 21 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:130: T__33
+                // InternalModelQueryLanguage.g:1:130: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 22 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:136: T__34
+                // InternalModelQueryLanguage.g:1:136: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 23 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:142: T__35
+                // InternalModelQueryLanguage.g:1:142: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 24 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:148: T__36
+                // InternalModelQueryLanguage.g:1:148: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 25 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:154: T__37
+                // InternalModelQueryLanguage.g:1:154: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 26 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:160: T__38
+                // InternalModelQueryLanguage.g:1:160: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 27 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:166: T__39
+                // InternalModelQueryLanguage.g:1:166: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 28 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:172: T__40
+                // InternalModelQueryLanguage.g:1:172: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 29 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:178: T__41
+                // InternalModelQueryLanguage.g:1:178: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 30 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:184: T__42
+                // InternalModelQueryLanguage.g:1:184: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 31 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:190: T__43
+                // InternalModelQueryLanguage.g:1:190: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 32 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:196: T__44
+                // InternalModelQueryLanguage.g:1:196: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 33 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:202: T__45
+                // InternalModelQueryLanguage.g:1:202: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 34 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:208: T__46
+                // InternalModelQueryLanguage.g:1:208: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 35 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:214: T__47
+                // InternalModelQueryLanguage.g:1:214: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 36 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:220: T__48
+                // InternalModelQueryLanguage.g:1:220: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 37 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:226: T__49
+                // InternalModelQueryLanguage.g:1:226: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 38 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:232: T__50
+                // InternalModelQueryLanguage.g:1:232: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
             case 39 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:238: T__51
+                // InternalModelQueryLanguage.g:1:238: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
             case 40 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:244: T__52
+                // InternalModelQueryLanguage.g:1:244: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
             case 41 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:250: T__53
+                // InternalModelQueryLanguage.g:1:250: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
             case 42 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:256: T__54
+                // InternalModelQueryLanguage.g:1:256: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
             case 43 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:262: T__55
+                // InternalModelQueryLanguage.g:1:262: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
             case 44 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:268: T__56
+                // InternalModelQueryLanguage.g:1:268: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
             case 45 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:274: T__57
+                // InternalModelQueryLanguage.g:1:274: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
             case 46 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:280: T__58
+                // InternalModelQueryLanguage.g:1:280: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
             case 47 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:286: T__59
+                // InternalModelQueryLanguage.g:1:286: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
             case 48 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:292: T__60
+                // InternalModelQueryLanguage.g:1:292: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
             case 49 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:298: T__61
+                // InternalModelQueryLanguage.g:1:298: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
             case 50 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:304: T__62
+                // InternalModelQueryLanguage.g:1:304: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
             case 51 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:310: T__63
+                // InternalModelQueryLanguage.g:1:310: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
             case 52 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:316: T__64
+                // InternalModelQueryLanguage.g:1:316: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
             case 53 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:322: T__65
+                // InternalModelQueryLanguage.g:1:322: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
             case 54 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:328: T__66
+                // InternalModelQueryLanguage.g:1:328: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
             case 55 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:334: T__67
+                // InternalModelQueryLanguage.g:1:334: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
             case 56 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:340: T__68
+                // InternalModelQueryLanguage.g:1:340: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
             case 57 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:346: T__69
+                // InternalModelQueryLanguage.g:1:346: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
             case 58 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:352: T__70
+                // InternalModelQueryLanguage.g:1:352: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
             case 59 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:358: T__71
+                // InternalModelQueryLanguage.g:1:358: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
             case 60 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:364: T__72
+                // InternalModelQueryLanguage.g:1:364: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
             case 61 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:370: T__73
+                // InternalModelQueryLanguage.g:1:370: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
             case 62 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:376: T__74
+                // InternalModelQueryLanguage.g:1:376: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
             case 63 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:382: T__75
+                // InternalModelQueryLanguage.g:1:382: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
             case 64 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:388: T__76
+                // InternalModelQueryLanguage.g:1:388: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
             case 65 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:394: T__77
+                // InternalModelQueryLanguage.g:1:394: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
             case 66 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:400: T__78
+                // InternalModelQueryLanguage.g:1:400: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
             case 67 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:406: T__79
+                // InternalModelQueryLanguage.g:1:406: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
             case 68 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:412: T__80
+                // InternalModelQueryLanguage.g:1:412: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
             case 69 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:418: T__81
+                // InternalModelQueryLanguage.g:1:418: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
             case 70 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:424: T__82
+                // InternalModelQueryLanguage.g:1:424: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
             case 71 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:430: T__83
+                // InternalModelQueryLanguage.g:1:430: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
             case 72 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:436: T__84
+                // InternalModelQueryLanguage.g:1:436: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
             case 73 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:442: T__85
+                // InternalModelQueryLanguage.g:1:442: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
             case 74 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:448: T__86
+                // InternalModelQueryLanguage.g:1:448: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
             case 75 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:454: T__87
+                // InternalModelQueryLanguage.g:1:454: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
             case 76 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:460: RULE_HEX
+                // InternalModelQueryLanguage.g:1:460: RULE_HEX
                 {
                 mRULE_HEX(); 
 
                 }
                 break;
             case 77 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:469: RULE_INT
+                // InternalModelQueryLanguage.g:1:469: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 78 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:478: RULE_DECIMAL
+                // InternalModelQueryLanguage.g:1:478: RULE_DECIMAL
                 {
                 mRULE_DECIMAL(); 
 
                 }
                 break;
             case 79 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:491: RULE_ID
+                // InternalModelQueryLanguage.g:1:491: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 80 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:499: RULE_STRING
+                // InternalModelQueryLanguage.g:1:499: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 81 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:511: RULE_ML_COMMENT
+                // InternalModelQueryLanguage.g:1:511: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 82 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:527: RULE_SL_COMMENT
+                // InternalModelQueryLanguage.g:1:527: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 83 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:543: RULE_WS
+                // InternalModelQueryLanguage.g:1:543: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 84 :
-                // ../org.eclipse.xtext.mql.ui/src-gen/org/eclipse/xtext/mqrepl/ui/contentassist/antlr/internal/InternalModelQueryLanguage.g:1:551: RULE_ANY_OTHER
+                // InternalModelQueryLanguage.g:1:551: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

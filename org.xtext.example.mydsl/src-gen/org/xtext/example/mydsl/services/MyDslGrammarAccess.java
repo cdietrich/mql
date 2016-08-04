@@ -19,7 +19,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Model");
 		private final Assignment cEntitiesAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cEntitiesEntityParserRuleCall_0 = (RuleCall)cEntitiesAssignment.eContents().get(0);
 		
@@ -35,7 +35,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entity");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Entity");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEntityKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -46,13 +46,15 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Entity:
-		//	"entity" name=ID "{" features+=Feature* "}";
+		//	'entity' name=ID '{'
+		//	features+=Feature*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"entity" name=ID "{" features+=Feature* "}"
+		//'entity' name=ID '{' features+=Feature* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"entity"
+		//'entity'
 		public Keyword getEntityKeyword_0() { return cEntityKeyword_0; }
 
 		//name=ID
@@ -61,7 +63,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//features+=Feature*
@@ -70,12 +72,12 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getFeaturesFeatureParserRuleCall_3_0() { return cFeaturesFeatureParserRuleCall_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Feature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cAttributeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cReferenceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -95,7 +97,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Attribute");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Attribute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAttrKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -105,13 +107,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeTypeEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
 		
 		//Attribute:
-		//	"attr" name=ID ":" type=Type;
+		//	'attr' name=ID ':' type=Type;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"attr" name=ID ":" type=Type
+		//'attr' name=ID ':' type=Type
 		public Group getGroup() { return cGroup; }
 
-		//"attr"
+		//'attr'
 		public Keyword getAttrKeyword_0() { return cAttrKeyword_0; }
 
 		//name=ID
@@ -120,7 +122,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
 		//type=Type
@@ -131,7 +133,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ReferenceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Reference");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Reference");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRefKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -142,13 +144,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeEntityIDTerminalRuleCall_3_0_1 = (RuleCall)cTypeEntityCrossReference_3_0.eContents().get(1);
 		
 		//Reference:
-		//	"ref" name=ID ":" type=[Entity];
+		//	'ref' name=ID ':' type=[Entity];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"ref" name=ID ":" type=[Entity]
+		//'ref' name=ID ':' type=[Entity]
 		public Group getGroup() { return cGroup; }
 
-		//"ref"
+		//'ref'
 		public Keyword getRefKeyword_0() { return cRefKeyword_0; }
 
 		//name=ID
@@ -157,7 +159,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
 		//type=[Entity]
@@ -172,7 +174,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class TypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Type");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cStringEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cStringStringKeyword_0_0 = (Keyword)cStringEnumLiteralDeclaration_0.eContents().get(0);
@@ -204,7 +206,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final FeatureElements pFeature;
 	private final AttributeElements pAttribute;
 	private final ReferenceElements pReference;
-	private final TypeElements unknownRuleType;
+	private final TypeElements eType;
 	
 	private final Grammar grammar;
 
@@ -220,7 +222,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pFeature = new FeatureElements();
 		this.pAttribute = new AttributeElements();
 		this.pReference = new ReferenceElements();
-		this.unknownRuleType = new TypeElements();
+		this.eType = new TypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -261,7 +263,9 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	"entity" name=ID "{" features+=Feature* "}";
+	//	'entity' name=ID '{'
+	//	features+=Feature*
+	//	'}';
 	public EntityElements getEntityAccess() {
 		return pEntity;
 	}
@@ -281,7 +285,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Attribute:
-	//	"attr" name=ID ":" type=Type;
+	//	'attr' name=ID ':' type=Type;
 	public AttributeElements getAttributeAccess() {
 		return pAttribute;
 	}
@@ -291,7 +295,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Reference:
-	//	"ref" name=ID ":" type=[Entity];
+	//	'ref' name=ID ':' type=[Entity];
 	public ReferenceElements getReferenceAccess() {
 		return pReference;
 	}
@@ -303,7 +307,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum Type:
 	//	string | int;
 	public TypeElements getTypeAccess() {
-		return unknownRuleType;
+		return eType;
 	}
 	
 	public EnumRule getTypeRule() {
@@ -311,38 +315,38 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
+	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
-	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	"/ *"->"* /";
+	//	'/ *'->'* /';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
+	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//	(" " | "\t" | "\r" | "\n")+;
+	//	' ' | '\t' | '\r' | '\n'+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
