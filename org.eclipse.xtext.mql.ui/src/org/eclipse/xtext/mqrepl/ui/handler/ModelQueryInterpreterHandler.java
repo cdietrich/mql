@@ -1,15 +1,25 @@
 package org.eclipse.xtext.mqrepl.ui.handler;
 
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.IHandler;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.jdt.core.IClasspathEntry;
+import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
@@ -22,6 +32,7 @@ import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.XtextResource;
+import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.serializer.ISerializer;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.ui.editor.model.XtextDocument;
@@ -37,6 +48,7 @@ import org.eclipse.xtext.xbase.interpreter.impl.XbaseInterpreter;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xtype.XImportDeclaration;
 
+import com.google.common.collect.Sets;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Provider;
@@ -53,7 +65,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 	IResourceSetProvider resourceSetByProjectProvider;
 
 	@Inject
-	XbaseInterpreter xbaseInterpreter;
+	private Provider<XbaseInterpreter> interpreterProvider;
 
 	@Inject
 	JavaProjectFactory javaProjectFactory;
@@ -69,6 +81,10 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 
 	@Inject
 	IWorkbench workbench;
+	
+	
+	@Inject
+	IResourceSetProvider rsp;
 
 	@Override
 	public Object execute(ExecutionEvent event) {
@@ -135,10 +151,73 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		} 
 		return null;
 	}
+	
+	protected XbaseInterpreter getConfiguredInterpreter(XtextResource resource) {
+		XbaseInterpreter interpreter2 = interpreterProvider.get();
+		ResourceSet set = resource.getResourceSet();
+		ClassLoader cl = getClass().getClassLoader();
+		if (set instanceof XtextResourceSet) {
+			Object context = ((XtextResourceSet) set).getClasspathURIContext();
+			if (context instanceof IJavaProject) {
+				try {
+					final IJavaProject jp = (IJavaProject) context;
+					// String[] runtimeClassPath =
+					// JavaRuntime.computeDefaultRuntimeClassPath(jp);
+					// URL[] urls = new URL[runtimeClassPath.length];
+					// for (int i = 0; i < urls.length; i++) {
+					// urls[i] = new URL(runtimeClassPath[i]);
+					// }
+					// cl = new URLClassLoader(urls);
+					IClasspathEntry[] classpath = jp.getResolvedClasspath(true);
+					final IWorkspaceRoot root = jp.getProject().getWorkspace().getRoot();
+					Set<URL> urls = Sets.<URL>newHashSet();
+					for (int i = 0; i < classpath.length; i++) {
+						final IClasspathEntry entry = classpath[i];
+						if (entry.getEntryKind() == IClasspathEntry.CPE_SOURCE) {
+							IPath outputLocation = entry.getOutputLocation();
+							if (outputLocation == null) {
+								outputLocation = jp.getOutputLocation();
+							}
+							IFolder folder = root.getFolder(outputLocation);
+							if (folder.exists()) {
+								urls.add(new URL(folder.getRawLocationURI().toASCIIString() + "/"));
+							}
+						} else if (entry.getEntryKind() == IClasspathEntry.CPE_PROJECT) {
+							IPath outputLocation = entry.getOutputLocation();
+							if (outputLocation == null) {
+								IProject project = (IProject) jp.getProject().getWorkspace().getRoot()
+										.getContainerForLocation(entry.getPath());
+								IJavaProject javaProject = JavaCore.create(project);
+								outputLocation = javaProject.getOutputLocation();
+							}
+							IFolder folder = root.getFolder(outputLocation);
+							if (folder.exists()) {
+								urls.add(new URL(folder.getRawLocationURI().toASCIIString() + "/"));
+							}
+						} else {
+							urls.add(entry.getPath().toFile().toURI().toURL());
+						}
+					}
+					System.out.println(urls);
+					cl = new URLClassLoader(urls.toArray(new URL[urls.size()]), cl);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		interpreter2.setClassLoader(cl);
+		return interpreter2;
+	}
 
 	private String interpret(final IProject project, final Model m, final IProgressMonitor monitor) {
-		final List<String> data = new ArrayList<String>();
+		
+		
 		IEvaluationContext context = new DefaultEvaluationContext();
+		XbaseInterpreter configuredInterpreter = getConfiguredInterpreter((XtextResource)m.eResource());
+		
+		
+		
+		final List<String> data = new ArrayList<String>();
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX), resourceDescriptions);
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.PROJECT), project);
@@ -158,7 +237,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 				monitor.done();
 				return IterableExtensions.join(data, "\n");
 			}
-			IEvaluationResult result = xbaseInterpreter.evaluate(x, context, CancelIndicator.NullImpl);
+			IEvaluationResult result = configuredInterpreter.evaluate(x, context, CancelIndicator.NullImpl);
 			data.add(serializer.serialize(x).trim());
 			if (result.getException() != null) {
 				data.add("// Exception: " + result.getException().getMessage());

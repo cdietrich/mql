@@ -3,6 +3,7 @@ package org.eclipse.xtext.mqrepl;
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import com.google.inject.Injector;
+import demo.DemoFactory;
 import java.util.List;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.EList;
@@ -32,6 +33,10 @@ public class ModelQuery {
   private Injector injector;
   
   public void main() throws Exception {
+    this.upper("xxxx");
+    this.project.getName();
+    final DemoFactory fac = DemoFactory.eINSTANCE;
+    fac.createDemo();
     final Function2<EClass, Class<? extends EObject>, Iterable<? extends EObject>> _function = (EClass typ, Class<? extends EObject> typ2) -> {
       Iterable<? extends EObject> _xblockexpression = null;
       {
@@ -67,8 +72,6 @@ public class ModelQuery {
     };
     Iterable<String> _map = IterableExtensions.<Entity, String>map(entitiesWithoutName, _function_2);
     IterableExtensions.<String>toList(_map);
-    this.upper("xxxx");
-    this.project.getName();
   }
   
   public <T extends Object> Iterable<T> alle(final EClass typ) {

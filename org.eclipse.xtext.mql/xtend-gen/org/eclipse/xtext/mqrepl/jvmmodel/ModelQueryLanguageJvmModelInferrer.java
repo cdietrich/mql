@@ -14,7 +14,6 @@ import org.eclipse.xtext.common.types.JvmMember;
 import org.eclipse.xtext.common.types.JvmOperation;
 import org.eclipse.xtext.common.types.JvmTypeParameter;
 import org.eclipse.xtext.common.types.JvmTypeReference;
-import org.eclipse.xtext.common.types.util.TypeReferences;
 import org.eclipse.xtext.mqrepl.IModelQueryConstants;
 import org.eclipse.xtext.mqrepl.jvmmodel.ModelQueryLanguageJvmModelInferrerBase;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
@@ -33,40 +32,35 @@ public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmMod
   @Extension
   private JvmTypesBuilder _jvmTypesBuilder;
   
-  @Inject
-  @Extension
-  private TypeReferences _typeReferences;
-  
   protected void _infer(final Model model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
     JvmGenericType _class = this._jvmTypesBuilder.toClass(model, IModelQueryConstants.INFERRED_CLASS_NAME);
-    IJvmDeclaredTypeAcceptor.IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
     final Procedure1<JvmGenericType> _function = (JvmGenericType it) -> {
       EList<JvmMember> _members = it.getMembers();
-      JvmTypeReference _typeForName = this._typeReferences.getTypeForName(IResourceDescriptions.class, model);
-      JvmField _field = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INDEX, _typeForName);
+      JvmTypeReference _typeRef = this._typeReferenceBuilder.typeRef(IResourceDescriptions.class);
+      JvmField _field = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INDEX, _typeRef);
       this._jvmTypesBuilder.<JvmField>operator_add(_members, _field);
       EList<JvmMember> _members_1 = it.getMembers();
-      JvmTypeReference _typeForName_1 = this._typeReferences.getTypeForName(IProject.class, model);
-      JvmField _field_1 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.PROJECT, _typeForName_1);
+      JvmTypeReference _typeRef_1 = this._typeReferenceBuilder.typeRef(IProject.class);
+      JvmField _field_1 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.PROJECT, _typeRef_1);
       this._jvmTypesBuilder.<JvmField>operator_add(_members_1, _field_1);
       EList<JvmMember> _members_2 = it.getMembers();
-      JvmTypeReference _typeForName_2 = this._typeReferences.getTypeForName(ResourceSet.class, model);
-      JvmField _field_2 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.RESOURCESET, _typeForName_2);
+      JvmTypeReference _typeRef_2 = this._typeReferenceBuilder.typeRef(ResourceSet.class);
+      JvmField _field_2 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.RESOURCESET, _typeRef_2);
       this._jvmTypesBuilder.<JvmField>operator_add(_members_2, _field_2);
       EList<JvmMember> _members_3 = it.getMembers();
-      JvmTypeReference _typeForName_3 = this._typeReferences.getTypeForName(Injector.class, model);
-      JvmField _field_3 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INJECTOR, _typeForName_3);
+      JvmTypeReference _typeRef_3 = this._typeReferenceBuilder.typeRef(Injector.class);
+      JvmField _field_3 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INJECTOR, _typeRef_3);
       this._jvmTypesBuilder.<JvmField>operator_add(_members_3, _field_3);
       EList<JvmMember> _members_4 = it.getMembers();
-      JvmTypeReference _typeForName_4 = this._typeReferences.getTypeForName(Void.TYPE, model);
+      JvmTypeReference _typeRef_4 = this._typeReferenceBuilder.typeRef(Void.TYPE);
       final Procedure1<JvmOperation> _function_1 = (JvmOperation it_1) -> {
         XBlockExpression _body = model.getBody();
         this._jvmTypesBuilder.setBody(it_1, _body);
         EList<JvmTypeReference> _exceptions = it_1.getExceptions();
-        JvmTypeReference _typeForName_5 = this._typeReferences.getTypeForName(Exception.class, model);
-        this._jvmTypesBuilder.<JvmTypeReference>operator_add(_exceptions, _typeForName_5);
+        JvmTypeReference _typeRef_5 = this._typeReferenceBuilder.typeRef(Exception.class);
+        this._jvmTypesBuilder.<JvmTypeReference>operator_add(_exceptions, _typeRef_5);
       };
-      JvmOperation _method = this._jvmTypesBuilder.toMethod(model, "main", _typeForName_4, _function_1);
+      JvmOperation _method = this._jvmTypesBuilder.toMethod(model, "main", _typeRef_4, _function_1);
       this._jvmTypesBuilder.<JvmOperation>operator_add(_members_4, _method);
       EList<XMethodDeclaration> _methods = model.getMethods();
       for (final XMethodDeclaration op : _methods) {
@@ -98,7 +92,7 @@ public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmMod
         this._jvmTypesBuilder.<JvmOperation>operator_add(_members_5, _method_1);
       }
     };
-    _accept.initializeLater(_function);
+    acceptor.<JvmGenericType>accept(_class, _function);
   }
   
   public void infer(final EObject model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {

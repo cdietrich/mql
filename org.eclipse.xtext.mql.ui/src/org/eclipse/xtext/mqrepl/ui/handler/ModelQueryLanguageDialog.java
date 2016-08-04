@@ -62,5 +62,10 @@ public class ModelQueryLanguageDialog extends TitleAreaDialog {
 		setMessage("Result of Interpretation");
 		return control;
 	}
+	
+	@Override
+	protected boolean isResizable() {
+		return true;
+	}
 
 }

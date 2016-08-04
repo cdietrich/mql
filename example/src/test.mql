@@ -6,6 +6,7 @@ import org.xtext.example.mydsl.myDsl.Entity
 import org.xtext.example.mydsl.myDsl.Attribute
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EClass
+import demo.DemoFactory
 
 def <T> Iterable<T> alle(org.eclipse.emf.ecore.EClass typ) {
 	val List<IEObjectDescription> eiods = index.getExportedObjectsByType(typ).toList	
@@ -22,11 +23,19 @@ def upper(String s) {
 	s.toUpperCase
 }
 
+"xxxx".upper
+
+project.name
+
+val fac = DemoFactory.eINSTANCE
+fac.createDemo
+
 var alle2 = [EClass typ, Class<? extends EObject> typ2|
 	val List<IEObjectDescription> eiods = index.getExportedObjectsByType(typ).toList	
 	val a = eiods.map(g|EcoreUtil::resolve(g.EObjectOrProxy, resourceSet)).filter(typ2)
 	a
 ]
+
 
 
 val entities = alle2.apply(MyDslPackage$Literals::ENTITY, typeof(Entity)) as Iterable<Entity>
@@ -35,6 +44,3 @@ val entitiesWithoutName = entities.filter(e|e.features.filter(typeof(Attribute))
 		.filter(a|a.name == 'name').size == 0
 )
 entitiesWithoutName.map(e|e.name).toList
-"xxxx".upper
-
-project.name
