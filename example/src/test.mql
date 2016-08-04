@@ -36,3 +36,5 @@ val entitiesWithoutName = entities.filter(e|e.features.filter(typeof(Attribute))
 )
 entitiesWithoutName.map(e|e.name).toList
 "xxxx".upper
+
+project.name

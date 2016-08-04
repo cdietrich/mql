@@ -3,6 +3,7 @@ package org.eclipse.xtext.mqrepl.jvmmodel;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import java.util.Arrays;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -45,27 +46,31 @@ public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmMod
       JvmField _field = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INDEX, _typeForName);
       this._jvmTypesBuilder.<JvmField>operator_add(_members, _field);
       EList<JvmMember> _members_1 = it.getMembers();
-      JvmTypeReference _typeForName_1 = this._typeReferences.getTypeForName(ResourceSet.class, model);
-      JvmField _field_1 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.RESOURCESET, _typeForName_1);
+      JvmTypeReference _typeForName_1 = this._typeReferences.getTypeForName(IProject.class, model);
+      JvmField _field_1 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.PROJECT, _typeForName_1);
       this._jvmTypesBuilder.<JvmField>operator_add(_members_1, _field_1);
       EList<JvmMember> _members_2 = it.getMembers();
-      JvmTypeReference _typeForName_2 = this._typeReferences.getTypeForName(Injector.class, model);
-      JvmField _field_2 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INJECTOR, _typeForName_2);
+      JvmTypeReference _typeForName_2 = this._typeReferences.getTypeForName(ResourceSet.class, model);
+      JvmField _field_2 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.RESOURCESET, _typeForName_2);
       this._jvmTypesBuilder.<JvmField>operator_add(_members_2, _field_2);
       EList<JvmMember> _members_3 = it.getMembers();
-      JvmTypeReference _typeForName_3 = this._typeReferences.getTypeForName(Void.TYPE, model);
+      JvmTypeReference _typeForName_3 = this._typeReferences.getTypeForName(Injector.class, model);
+      JvmField _field_3 = this._jvmTypesBuilder.toField(model, IModelQueryConstants.INJECTOR, _typeForName_3);
+      this._jvmTypesBuilder.<JvmField>operator_add(_members_3, _field_3);
+      EList<JvmMember> _members_4 = it.getMembers();
+      JvmTypeReference _typeForName_4 = this._typeReferences.getTypeForName(Void.TYPE, model);
       final Procedure1<JvmOperation> _function_1 = (JvmOperation it_1) -> {
         XBlockExpression _body = model.getBody();
         this._jvmTypesBuilder.setBody(it_1, _body);
         EList<JvmTypeReference> _exceptions = it_1.getExceptions();
-        JvmTypeReference _typeForName_4 = this._typeReferences.getTypeForName(Exception.class, model);
-        this._jvmTypesBuilder.<JvmTypeReference>operator_add(_exceptions, _typeForName_4);
+        JvmTypeReference _typeForName_5 = this._typeReferences.getTypeForName(Exception.class, model);
+        this._jvmTypesBuilder.<JvmTypeReference>operator_add(_exceptions, _typeForName_5);
       };
-      JvmOperation _method = this._jvmTypesBuilder.toMethod(model, "main", _typeForName_3, _function_1);
-      this._jvmTypesBuilder.<JvmOperation>operator_add(_members_3, _method);
+      JvmOperation _method = this._jvmTypesBuilder.toMethod(model, "main", _typeForName_4, _function_1);
+      this._jvmTypesBuilder.<JvmOperation>operator_add(_members_4, _method);
       EList<XMethodDeclaration> _methods = model.getMethods();
       for (final XMethodDeclaration op : _methods) {
-        EList<JvmMember> _members_4 = it.getMembers();
+        EList<JvmMember> _members_5 = it.getMembers();
         String _name = op.getName();
         JvmTypeReference _elvis = null;
         JvmTypeReference _type = op.getType();
@@ -90,7 +95,7 @@ public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmMod
           this._jvmTypesBuilder.setBody(it_1, _body);
         };
         JvmOperation _method_1 = this._jvmTypesBuilder.toMethod(op, _name, _elvis, _function_2);
-        this._jvmTypesBuilder.<JvmOperation>operator_add(_members_4, _method_1);
+        this._jvmTypesBuilder.<JvmOperation>operator_add(_members_5, _method_1);
       }
     };
     _accept.initializeLater(_function);

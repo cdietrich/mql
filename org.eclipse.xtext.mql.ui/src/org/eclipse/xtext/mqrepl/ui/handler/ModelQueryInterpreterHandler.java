@@ -104,6 +104,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 //		} else 
 		if (activeEditor != null && activeEditor instanceof XtextEditor) {
 			final XtextEditor editor = (XtextEditor) activeEditor;
+			IProject project = ((IFileEditorInput)editor.getEditorInput()).getFile().getProject();
 			final Holder<String> ref = new Holder<String>();
 			try {
 				workbench.getProgressService().run(true, true, new IRunnableWithProgress() {
@@ -115,7 +116,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 							@Override
 							public String exec(XtextResource r) throws Exception {
 								Model m = (Model) r.getContents().get(0);
-								return interpret(m, monitor);
+								return interpret(project, m, monitor);
 							}
 						});
 						ref.set(result);
@@ -126,7 +127,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			IProject project = ((IFileEditorInput)editor.getEditorInput()).getFile().getProject();
+			
 			ModelQueryLanguageDialog dialog = new ModelQueryLanguageDialog(Display.getCurrent().getActiveShell(), ref.get(), project);
 			injector.injectMembers(dialog);
 			dialog.open();
@@ -135,11 +136,12 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		return null;
 	}
 
-	private String interpret(final Model m, final IProgressMonitor monitor) {
+	private String interpret(final IProject project, final Model m, final IProgressMonitor monitor) {
 		final List<String> data = new ArrayList<String>();
 		IEvaluationContext context = new DefaultEvaluationContext();
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX), resourceDescriptions);
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
+		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.PROJECT), project);
 		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INJECTOR), injector);
 		if (m.getImportSection() != null) {
 			for (XImportDeclaration i : m.getImportSection().getImportDeclarations()) {

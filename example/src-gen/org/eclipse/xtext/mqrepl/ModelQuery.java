@@ -4,6 +4,7 @@ import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import com.google.inject.Injector;
 import java.util.List;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -23,6 +24,8 @@ import org.xtext.example.mydsl.myDsl.MyDslPackage;
 @SuppressWarnings("all")
 public class ModelQuery {
   private IResourceDescriptions index;
+  
+  private IProject project;
   
   private ResourceSet resourceSet;
   
@@ -65,6 +68,7 @@ public class ModelQuery {
     Iterable<String> _map = IterableExtensions.<Entity, String>map(entitiesWithoutName, _function_2);
     IterableExtensions.<String>toList(_map);
     this.upper("xxxx");
+    this.project.getName();
   }
   
   public <T extends Object> Iterable<T> alle(final EClass typ) {
