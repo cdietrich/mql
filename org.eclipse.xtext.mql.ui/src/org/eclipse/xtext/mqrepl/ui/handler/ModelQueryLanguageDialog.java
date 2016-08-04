@@ -1,12 +1,12 @@
 package org.eclipse.xtext.mqrepl.ui.handler;
 
+import org.eclipse.core.internal.resources.Project;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
+import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.text.source.LineNumberRulerColumn;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.xtext.mqrepl.ui.views.ModelQueryLanguageEditedResourceProvider;
 import org.eclipse.xtext.mqrepl.ui.views.ViewerConfiguration;
@@ -20,9 +20,6 @@ public class ModelQueryLanguageDialog extends TitleAreaDialog {
 
 	private final String content;
 	
-	private static final String FONT_NAME = "Consolas"; //$NON-NLS-1$
-    private static final int FONT_SIZE = 12;
-
 	@Inject
 	ModelQueryLanguageEditedResourceProvider editedResourceProvider;
 
@@ -34,18 +31,23 @@ public class ModelQueryLanguageDialog extends TitleAreaDialog {
 	
 	private EmbeddedEditor embeddedEditor;
 
-	public ModelQueryLanguageDialog(Shell parentShell, String content) {
+	private IProject project;
+
+	public ModelQueryLanguageDialog(Shell parentShell, String content, IProject project) {
 		super(parentShell);
 		this.content = content;
+		this.project = project;
 	}
 
 	@Override
 	protected Control createDialogArea(Composite parent) {
+		editedResourceProvider.configureProject(project);
 		Composite composite = (Composite) super.createDialogArea(parent);
 		embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider).showErrorAndWarningAnnotations().readOnly().withParent(composite);
 		embeddedEditor.createPartialEditor();
 		configuration.getHighlightingHelper().install(embeddedEditor.getConfiguration(), embeddedEditor.getViewer());
-		embeddedEditor.getViewer().getControl().setFont(new Font(Display.getDefault(), FONT_NAME, FONT_SIZE, SWT.NORMAL));
+		embeddedEditor.getViewer().getTextWidget().setFont(JFaceResources.getFont(JFaceResources.TEXT_FONT));
+		
 		LineNumberRulerColumn lineNumberRulerColumn = new LineNumberRulerColumn();
 		embeddedEditor.getViewer().addVerticalRulerColumn(lineNumberRulerColumn); 
 		embeddedEditor.getDocument().set(content);

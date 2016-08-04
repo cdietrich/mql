@@ -7,18 +7,18 @@ import java.util.List;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.IHandler;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.mqrepl.IModelQueryConstants;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.Model;
 import org.eclipse.xtext.mqrepl.modelQueryLanguage.XMethodDeclaration;
-import org.eclipse.xtext.mqrepl.ui.views.ModelQueryLanguageView;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.XtextResource;
@@ -73,35 +73,36 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 	@Override
 	public Object execute(ExecutionEvent event) {
 
-		final IWorkbenchPart view = HandlerUtil.getActivePart(event);
+//		final IWorkbenchPart view = HandlerUtil.getActivePart(event);
 		IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
-		 if (view instanceof ModelQueryLanguageView) {
-			final ModelQueryLanguageView mqlv = (ModelQueryLanguageView) view;
-			final Holder<String> ref = new Holder<String>();
-			try {
-				workbench.getProgressService().run(true, true, new IRunnableWithProgress() {
-
-					@Override
-					public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-						XtextDocument doc = ((ModelQueryLanguageView) view).getEmbeddedEditor().getDocument();
-						String result = doc.readOnly(new IUnitOfWork<String, XtextResource>() {
-							@Override
-							public String exec(XtextResource r) throws Exception {
-								Model m = (Model) r.getContents().get(0);
-								return interpret(m, monitor);
-							}
-						});
-						ref.set(result);
-					}
-				});
-				mqlv.getEmbeddedEditorResult().getDocument().set(ref.get());
-			} catch (InvocationTargetException e) {
-				e.printStackTrace();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
-		} else if (activeEditor != null && activeEditor instanceof XtextEditor) {
+//		 if (view instanceof ModelQueryLanguageView) {
+//			final ModelQueryLanguageView mqlv = (ModelQueryLanguageView) view;
+//			final Holder<String> ref = new Holder<String>();
+//			try {
+//				workbench.getProgressService().run(true, true, new IRunnableWithProgress() {
+//
+//					@Override
+//					public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+//						XtextDocument doc = ((ModelQueryLanguageView) view).getEmbeddedEditor().getDocument();
+//						String result = doc.readOnly(new IUnitOfWork<String, XtextResource>() {
+//							@Override
+//							public String exec(XtextResource r) throws Exception {
+//								Model m = (Model) r.getContents().get(0);
+//								return interpret(m, monitor);
+//							}
+//						});
+//						ref.set(result);
+//					}
+//				});
+//				mqlv.getEmbeddedEditorResult().getDocument().set(ref.get());
+//			} catch (InvocationTargetException e) {
+//				e.printStackTrace();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//
+//		} else 
+		if (activeEditor != null && activeEditor instanceof XtextEditor) {
 			final XtextEditor editor = (XtextEditor) activeEditor;
 			final Holder<String> ref = new Holder<String>();
 			try {
@@ -125,8 +126,8 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
-			ModelQueryLanguageDialog dialog = new ModelQueryLanguageDialog(Display.getCurrent().getActiveShell(), ref.get());
+			IProject project = ((IFileEditorInput)editor.getEditorInput()).getFile().getProject();
+			ModelQueryLanguageDialog dialog = new ModelQueryLanguageDialog(Display.getCurrent().getActiveShell(), ref.get(), project);
 			injector.injectMembers(dialog);
 			dialog.open();
 
