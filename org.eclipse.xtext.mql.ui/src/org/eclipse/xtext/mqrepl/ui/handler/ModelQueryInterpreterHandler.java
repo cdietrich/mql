@@ -157,6 +157,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		ResourceSet set = resource.getResourceSet();
 		ClassLoader cl = getClass().getClassLoader();
 		if (set instanceof XtextResourceSet) {
+			// if this does not fit your needs have a look at XcoreJavaProjectProvider
 			Object context = ((XtextResourceSet) set).getClasspathURIContext();
 			if (context instanceof IJavaProject) {
 				try {
@@ -208,7 +209,7 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		interpreter2.setClassLoader(cl);
 		return interpreter2;
 	}
-
+	
 	private String interpret(final IProject project, final Model m, final IProgressMonitor monitor) {
 		
 		
