@@ -216,13 +216,13 @@ public class ModelQueryInterpreterHandler extends AbstractHandler implements IHa
 		IEvaluationContext context = new DefaultEvaluationContext();
 		XbaseInterpreter configuredInterpreter = getConfiguredInterpreter((XtextResource)m.eResource());
 		
-		
+		String postfix = m.eResource().getURI().trimFileExtension().lastSegment();
 		
 		final List<String> data = new ArrayList<String>();
-		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX), resourceDescriptions);
-		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
-		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.PROJECT), project);
-		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INJECTOR), injector);
+		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + postfix + "." + IModelQueryConstants.INDEX), resourceDescriptions);
+		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + postfix+ "." + IModelQueryConstants.RESOURCESET), resourceSetProvider.get());
+		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + postfix+ "." + IModelQueryConstants.PROJECT), project);
+		context.newValue(qualifiedNameConverter.toQualifiedName(IModelQueryConstants.INFERRED_CLASS_NAME + postfix + "." + IModelQueryConstants.INJECTOR), injector);
 		if (m.getImportSection() != null) {
 			for (XImportDeclaration i : m.getImportSection().getImportDeclarations()) {
 				data.add(serializer.serialize(i).trim());

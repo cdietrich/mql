@@ -5,7 +5,9 @@ import com.google.inject.Injector;
 import java.util.Arrays;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.common.types.JvmField;
 import org.eclipse.xtext.common.types.JvmFormalParameter;
@@ -33,7 +35,11 @@ public class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmMod
   private JvmTypesBuilder _jvmTypesBuilder;
   
   protected void _infer(final Model model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
-    JvmGenericType _class = this._jvmTypesBuilder.toClass(model, IModelQueryConstants.INFERRED_CLASS_NAME);
+    Resource _eResource = model.eResource();
+    URI _uRI = _eResource.getURI();
+    URI _trimFileExtension = _uRI.trimFileExtension();
+    final String postfix = _trimFileExtension.lastSegment();
+    JvmGenericType _class = this._jvmTypesBuilder.toClass(model, (IModelQueryConstants.INFERRED_CLASS_NAME + postfix));
     final Procedure1<JvmGenericType> _function = (JvmGenericType it) -> {
       EList<JvmMember> _members = it.getMembers();
       JvmTypeReference _typeRef = this._typeReferenceBuilder.typeRef(IResourceDescriptions.class);

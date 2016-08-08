@@ -63,16 +63,16 @@ public class ModelQueryLanguageInterpreter extends XbaseInterpreter {
 
 	@Override
 	protected Object _invokeFeature(JvmField jvmField, XAbstractFeatureCall featureCall, Object receiver, IEvaluationContext context, CancelIndicator indicator) {
-		if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INDEX)) {
+		if (jvmField.getQualifiedName().startsWith(IModelQueryConstants.INFERRED_CLASS_NAME) && jvmField.getQualifiedName().endsWith("." + IModelQueryConstants.INDEX)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
-		} else if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.RESOURCESET)) {
+		} else if (jvmField.getQualifiedName().startsWith(IModelQueryConstants.INFERRED_CLASS_NAME) && jvmField.getQualifiedName().endsWith("." + IModelQueryConstants.RESOURCESET)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
-		} else if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.INJECTOR)) {
+		} else if (jvmField.getQualifiedName().startsWith(IModelQueryConstants.INFERRED_CLASS_NAME) && jvmField.getQualifiedName().endsWith("." + IModelQueryConstants.INJECTOR)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
-		} else if (jvmField.getQualifiedName().equals(IModelQueryConstants.INFERRED_CLASS_NAME + "." + IModelQueryConstants.PROJECT)) {
+		} else if (jvmField.getQualifiedName().startsWith(IModelQueryConstants.INFERRED_CLASS_NAME) && jvmField.getQualifiedName().endsWith("." + IModelQueryConstants.PROJECT)) {
 			Object result = context.getValue(qualifiedNameConverter.toQualifiedName(jvmField.getQualifiedName()));
 			return result;
 		}

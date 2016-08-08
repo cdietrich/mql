@@ -15,8 +15,9 @@ class ModelQueryLanguageJvmModelInferrer extends ModelQueryLanguageJvmModelInfer
 	@Inject extension JvmTypesBuilder
 	
    	def dispatch void infer(Model model, IJvmDeclaredTypeAcceptor acceptor, boolean isPrelinkingPhase) {
+   		val postfix = model.eResource.URI.trimFileExtension.lastSegment
    		acceptor.accept(
-   			model.toClass(IModelQueryConstants.INFERRED_CLASS_NAME)
+   			model.toClass(IModelQueryConstants.INFERRED_CLASS_NAME + postfix)
    		) [
    				members += model.toField(IModelQueryConstants.INDEX, IResourceDescriptions.typeRef())
    				members += model.toField(IModelQueryConstants.PROJECT, IProject.typeRef())
