@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
-
 <plugin>
-
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http://www.eclipse.org/xtext/mqrepl/ModelQueryLanguage" 
-       class = "org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage"
-       genModel = "org/eclipse/xtext/mqrepl/ModelQueryLanguage.genmodel" /> 
-	
-  </extension>
-
-
-
-
-
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.eclipse.org/xtext/mqrepl/ModelQueryLanguage"
+			class = "org.eclipse.xtext.mqrepl.modelQueryLanguage.ModelQueryLanguagePackage"
+			genModel = "model/generated/ModelQueryLanguage.genmodel" />
+	</extension>
 </plugin>
