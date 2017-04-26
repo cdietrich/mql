@@ -4,12 +4,13 @@
 package org.xtext.example.mydsl.generator
 
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.AbstractGenerator
+import org.eclipse.xtext.generator.IFileSystemAccess2
+import org.eclipse.xtext.generator.IGeneratorContext
 
-class MyDslGenerator implements IGenerator {
+class MyDslGenerator extends AbstractGenerator {
 	
-	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext ctx) {
 		//TODO implement me
 	}
 }

@@ -22,6 +22,9 @@
 		<module>org.eclipse.xtext.mql.ui.tests</module>
 		<module>org.eclipse.xtext.mql.feature</module>
 		<module>org.eclipse.xtext.mql.repository</module>
+		<module>org.xtext.example.mydsl</module>
+		<module>org.xtext.example.mydsl.tests</module>
+		<module>org.xtext.example.mydsl.ui</module>
 	</modules>
 	<build>
 		<plugins>

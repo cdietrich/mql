@@ -30,4 +30,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.xtext.mqrepl.ui.quickfix,
  org.eclipse.xtext.mql.ui.internal,
  org.eclipse.xtext.mqrepl.ui.contentassist
-Bundle-Activator: org.eclipse.xtext.mqrepl.ui.internal.ModelQueryLanguageActivator
+Bundle-Activator: org.eclipse.xtext.mql.ui.internal.MqlActivator

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.xtext.example.mydsl.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.xtext.example.mydsl.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.mydsl;visibility:=reexport,
@@ -15,13 +15,15 @@ Require-Bundle: org.xtext.example.mydsl;visibility:=reexport,
  org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
- org.eclipse.compare
+ org.eclipse.compare,
+ org.eclipse.xtend.lib;resolution:=optional,
+ org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.xtext.example.mydsl.ui.contentassist,
- org.xtext.example.mydsl.ui.contentassist.antlr,
  org.xtext.example.mydsl.ui.internal,
  org.xtext.example.mydsl.ui.quickfix,
- org.xtext.example.mydsl.ui.contentassist.antlr.internal
-Bundle-Activator: org.xtext.example.mydsl.ui.internal.MyDslActivator
+ org.xtext.example.mydsl.ide.contentassist.antlr.internal,
+ org.xtext.example.mydsl.ide.contentassist.antlr
+Bundle-Activator: org.xtext.example.mydsl.ui.internal.MydslActivator
